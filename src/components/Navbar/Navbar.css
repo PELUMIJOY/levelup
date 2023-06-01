@@ -1,0 +1,162 @@
+.nav-wrapper{
+    background: linear-gradient(109.07deg, #2E1583 16.88%, #C24AEC 79.15%);
+    margin: 10px;
+    /* position: relative; */
+}
+.nav-head{
+    display: flex;
+    justify-content: space-between; 
+    margin: 2rem;
+    
+}
+.nav-left{
+    color:white;
+    padding: 10px;
+    font-weight: 800;
+    font-size: 20px;
+}
+.nav-leftspan{
+            
+    background: white;
+    color: #2E1583;
+    padding: 2px;
+    font-weight: 700;
+}
+.nav-right{
+    color: white;
+    padding: 20px;
+}
+.nav-right a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    
+}
+.log{
+    border: 2px solid white;
+    border-radius: 30px;
+    padding:  20px;   
+}
+.nav-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.nav-bottom-right{
+margin: 2rem;
+width: 50%;
+}
+.nav-bottom-right h1{
+    font-size: 60px;
+    font-weight: 700;
+    color: #ffff; 	
+}
+.span{
+    color: #00FFE0;
+}
+.nav-bottom-right p{
+
+    font-size: 20px;
+    text-align: justify;
+    color: #ffffff;
+}
+.nav-btn{
+    border: 1px solid white;
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 8px;
+   
+}
+.nav-img{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+img{
+   
+    border-radius: 50%;
+    border: 3px solid #fff;
+    
+}
+.nav-cat{
+    position: absolute;
+    left: 900px;
+     top: 80px; 
+     width: 250px;
+}
+.nav-brick{
+    position: absolute;
+    left: 750px;
+    top: 400px;
+    width: 180px;
+   
+}
+.nav-code{
+    position: absolute;
+    left: 750px;
+    top: 220px;
+    width: 80px;
+}
+.nav-fas{
+    position: absolute;
+    left: 980px;
+    top: 406.3px;
+    width: 150px;
+} 
+
+@media(max-width:768px){
+    .nav-right{
+        display: none;
+    } 
+    
+    .nav-bottom{
+        display: block;
+    }
+    .nav-btn{
+margin-bottom: 10px;
+    }
+    .nav-img{
+        display: none;
+    }
+    .nav-cat{
+        position: static;
+        left: 0px;
+         top: 0px; 
+         width: 250px;
+    }
+    .nav-brick{
+        position: static;
+        left: 0px;
+        top: 0px;
+        width: 180px;
+       
+    }
+    .nav-code{
+        position: static;
+        left: 0px;
+        top: 0px;
+        width: 80px;
+    }
+    .nav-fas{
+        position: static;
+        left:0px;
+        top: 0px;
+        width: 150px;
+    } 
+}
+@media(max-width:280px){
+    .nav-bottom-right{
+        width: 100%;
+    }
+    .nav-bottom-right h1{
+        font-size: 30px;
+    }
+    .nav-bottom-right p{
+       font-size: 15px;
+       width: 80%;
+
+    }
+}
