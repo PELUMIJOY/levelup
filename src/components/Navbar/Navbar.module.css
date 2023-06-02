@@ -1,32 +1,31 @@
-.nav-wrapper{
+.wrapper{
     background: linear-gradient(109.07deg, #2E1583 16.88%, #C24AEC 79.15%);
     margin: 10px;
     /* position: relative; */
 }
-.nav-head{
+.head{
     display: flex;
     justify-content: space-between; 
     margin: 2rem;
     
 }
-.nav-left{
+.left{
     color:white;
     padding: 10px;
     font-weight: 800;
     font-size: 20px;
 }
-.nav-leftspan{
-            
+.leftspan{        
     background: white;
     color: #2E1583;
     padding: 2px;
     font-weight: 700;
 }
-.nav-right{
+.right{
     color: white;
     padding: 20px;
 }
-.nav-right a{
+.right a{
     text-decoration: none;
     color: white;
     padding: 10px;
@@ -38,16 +37,22 @@
     border-radius: 30px;
     padding:  20px;   
 }
-.nav-bottom {
+.bottom {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-.nav-bottom-right{
+.btn{
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 10px;
+}
+.bottomRight{
 margin: 2rem;
 width: 50%;
 }
-.nav-bottom-right h1{
+.bottomRight h1{
     font-size: 60px;
     font-weight: 700;
     color: #ffff; 	
@@ -55,7 +60,7 @@ width: 50%;
 .span{
     color: #00FFE0;
 }
-.nav-bottom-right p{
+.bottomRight p{
 
     font-size: 20px;
     text-align: justify;
@@ -70,77 +75,85 @@ width: 50%;
     padding: 8px;
    
 }
-.nav-img{
+.img{
     width: 50%;
     display: flex;
     flex-direction: column;
 }
 img{
    
-    border-radius: 50%;
-    border: 3px solid #fff;
+    /* border-radius: 50%;
+    border: 3px solid #fff; */
     
 }
-.nav-cat{
+.cat{
     position: absolute;
     left: 900px;
      top: 80px; 
      width: 250px;
+     border-radius: 50%;
+     border: 3px solid #fff;
 }
-.nav-brick{
+.brick{
     position: absolute;
     left: 750px;
-    top: 400px;
+    top: 380px;
     width: 180px;
+    border-radius: 50%;
+    border: 3px solid #fff;
    
 }
-.nav-code{
+.code{
     position: absolute;
     left: 750px;
     top: 220px;
     width: 80px;
+    border-radius: 50%;
+    border: 3px solid #fff;
 }
-.nav-fas{
+.fas{
     position: absolute;
     left: 980px;
     top: 406.3px;
     width: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
 } 
 
 @media(max-width:768px){
-    .nav-right{
+    .right{
         display: none;
     } 
     
-    .nav-bottom{
+    .bottom{
         display: block;
     }
-    .nav-btn{
+    .btn{
 margin-bottom: 10px;
     }
-    .nav-img{
+    .img{
         display: none;
     }
-    .nav-cat{
+    .cat{
         position: static;
         left: 0px;
          top: 0px; 
          width: 250px;
     }
-    .nav-brick{
+    .brick{
         position: static;
         left: 0px;
         top: 0px;
         width: 180px;
        
     }
-    .nav-code{
+    .code{
         position: static;
         left: 0px;
         top: 0px;
         width: 80px;
     }
-    .nav-fas{
+    .fas{
         position: static;
         left:0px;
         top: 0px;
@@ -148,13 +161,13 @@ margin-bottom: 10px;
     } 
 }
 @media(max-width:280px){
-    .nav-bottom-right{
+    .bottomRight{
         width: 100%;
     }
-    .nav-bottom-right h1{
+    .bottomRight h1{
         font-size: 30px;
     }
-    .nav-bottom-right p{
+    .bottomRight p{
        font-size: 15px;
        width: 80%;
 

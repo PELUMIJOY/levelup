@@ -1,0 +1,15 @@
+.Us{
+    background: red;
+
+}
+.whyUs{
+    color: #481F72;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+
+
+}
+ .study{
+    display: flex;
+ }
