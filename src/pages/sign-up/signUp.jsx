@@ -9,7 +9,7 @@ const signUp = () => {
             Charit<span className={sign.leftspan}>Able</span>
           </h3>
           <div className={sign.content}>
-          <h2 className={sign.center}>Welcome Back!</h2>
+           <h2 className={sign.center}>Welcome Back!</h2>
             <p className={sign.center1}>To connect with us, Please Log In with your personal information.</p>
             <button className={sign.btn}>Signup</button>
           </div>
@@ -17,24 +17,33 @@ const signUp = () => {
         
         </div>
         <div className={sign.right}>
-            <h2>signup</h2>
-            <div>
+            <h2 className={sign.rightTop}>signup</h2>
+         <div className={sign.radioContainer}>
+         <div className={sign.radio}>
             <input type="radio" />
-            <label htmlFor="">Student</label>
+            <label className={sign.student} htmlFor="">Student</label>
+          </div>
+          <div className={sign.radio}>
              <input type="radio" />
-             <label htmlFor="">Instructor</label>
+             <label className={sign.student} htmlFor="">Instructor</label>
             </div>
-            <div>
-                <input type="name" placeholder="Name" required/>
-                <input type="Email" placeholder="Phone or Email" required/>
-                <input type="password" placeholder="Password"  required/>
-                <button>Sign Up</button>
-                <p>Already have account? <link rel="stylesheet" href="#" />Log In</p>
-            </div>
+         </div>
+         
+            <form action="" className={sign.middle}>
+            <input type="name" placeholder="Name"  className={sign.input} required/>
+                <input type="Email" placeholder="Phone or Email"  className={sign.input} required/>
+                <input type="password" placeholder="Password"  className={sign.input} required/>
+                {/* <input type="submit" value={signUp}/> */}
+                <button type="submit"  className={sign.inputbtn}>Sign Up</button>
+                <p className={sign.inputpara}>Already have account? <a className={sign.inputlink} href="#">Log In</a></p>
+            </form>
+            {/* <link rel="stylesheet" href="" /> */}
+            {/* <link rel="" href="#" className={sign.inputlink} / */}
+
             <hr/> OR<hr/>
-            <div>
-                <button>Sign Up with Google</button>
-                <button>Sign Up with Facebook</button>
+            <div className={sign.bottom}>
+                <button className={sign.bottom1}>Sign Up with Google</button>
+                <button className={sign.bottom1}>Sign Up with Facebook</button>
             </div>
            
         </div>

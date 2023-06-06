@@ -1,9 +1,11 @@
 .container{
     display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 .left{
     background: linear-gradient(161.91deg, #2D1583 0%, #C249EC 101.64%);
-   
+
 }
 .right{
     background: #FFFFFF;
@@ -26,6 +28,9 @@
 }
 .content{
     text-align:center;
+    /* justify-content: center; */
+    align-items: center;
+    /* height: 1000px; */
 }
 .center{
     display: flex;
@@ -40,6 +45,7 @@
     width: 300px;
     align-items: center;
     justify-content: center;
+    vertical-align: bottom;
     font-size: 18px;
     font-weight: 400;
     padding: 10px;
@@ -52,4 +58,86 @@
     background: linear-gradient(161.91deg, #2D1583 0%, #C249EC 101.64%);
     padding: 5px 20px 5px 20px;
     margin-bottom: 10px;
+}
+.rightTop{
+    color: #481F72;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: center;
+ 
+}
+.radioContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+.radio{
+    border: 1px solid #481F72 ;
+    border-radius: 50px;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    margin-left: 45px;
+  
+}
+.middle{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+}
+.input{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #481F72;
+    border-radius: 50px;
+    margin:10px;
+  
+}
+.inputbtn{
+    width: 100%;
+    padding: 10px;
+    background-color: #481F72;
+    color: #FFFFFF;
+    border: 1px solid #481F72;
+    border-radius: 50px;
+    margin:10px; 
+    
+}
+.inputpara{
+    text-align: right;
+    color: #481F72;
+    font-weight: 400;
+    font-size: 16px;
+}
+.inputlink{
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    color: #481F72;
+
+}
+hr{
+    color: #481F72;
+    width:40px;
+    left:20px
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+  
+
+}
+.bottom1{
+    width: 80%;
+    padding: 10px;
+    background: #FFFFFF;
+    color: #481F72;
+    border: 1px solid #481F72;
+    border-radius: 50px;
+    margin:10px  0 10px  60px;
+    
 }
