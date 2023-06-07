@@ -36,11 +36,12 @@ const signUp = () => {
                 {/* <input type="submit" value={signUp}/> */}
                 <button type="submit"  className={sign.inputbtn}>Sign Up</button>
                 <p className={sign.inputpara}>Already have account? <a className={sign.inputlink} href="#">Log In</a></p>
-            </form>
-            {/* <link rel="stylesheet" href="" /> */}
-            {/* <link rel="" href="#" className={sign.inputlink} / */}
+              </form>
+              <div className={sign.break}>
+               <hr /> <p>OR</p> <hr />
+              </div>
+         
 
-            <hr/> OR<hr/>
             <div className={sign.bottom}>
                 <button className={sign.bottom1}>Sign Up with Google</button>
                 <button className={sign.bottom1}>Sign Up with Facebook</button>

@@ -1,13 +1,9 @@
 import './App.css'
-import Contact from './components/Contact/Contact'
-import Footer from './components/Footer/Footer'
-import Hero from './components/Hero/Hero'
-import Join from './components/Join/Join'
-import Navbar from './components/Navbar/Navbar'
-import Categories from './components/Slider/Categories'
-import {slides} from "./components/Slider/Slider.js"
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 // import ages from "./pages/sign-up"
-import Pages from "./pages/sign-up/signUp"
+import Signup from "./pages/sign-up/signUp"
+import Home from './pages/Home'
 
 
 function App() {
@@ -15,14 +11,13 @@ function App() {
 
   return (
     <>
-     <Navbar/>
-     <Hero/>
-    <Categories slides={slides}/>
-    <Join/>
-     <Contact/>
-    <Footer/>
-    <Pages/>
-
+    <BrowserRouter>
+    <Routes>
+      <Route index element={<Home/>}> 
+      </Route>
+      <Route path='/signup' element={<Signup/>}/>
+    </Routes>
+    </BrowserRouter>
 
     </>
   )

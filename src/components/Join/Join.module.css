@@ -34,3 +34,28 @@
    border-radius: 20px;
    padding: 10px;
 }
+
+@media(max-width:768px){
+    .wrapper img{
+        width:150px;
+
+    }
+}
+
+@media(max-width:600px){
+    .wrapper1{
+        width:100%;
+    }
+    .head {
+        
+        text-align: center;
+        padding: 10px;
+      }
+    .wrapper img{
+        width:200px;
+
+    }
+    .wrapper{
+        flex-direction: column;
+    }
+}

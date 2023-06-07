@@ -33,6 +33,12 @@ margin-left: 40px;
 .volunteer{
     margin-left: 30px;
 }
+.support{
+    font-size: 20px;
+    align-items: center; 
+    /* line-height: 30px; */
+    margin-left: 40px;
+}
 .list{
 list-style: none;
 
@@ -67,17 +73,23 @@ list-style: none;
     flex:2;
 }
 
-@media(max-width:280px){
+@media(max-width:600px){
     .top{
         flex-direction: column;
         width: 100%;
     }
     .right{
-     width: 90%;
+     max-width: 77%;
+     flex: 0;
      /* padding: 5px; */
+     margin-left: 0;
         }
-.about{
-font-size: 16px;
+/* .about{
+font-size: 12px;
+} */
+.support{
+width: 30px;
+margin-right: 20px;
 }
 .bottom{
  /* display: none; */

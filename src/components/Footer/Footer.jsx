@@ -28,7 +28,7 @@ function Footer() {
             </ul>
         </div>
         <div>
-        <h3  className={footer.about}>Support</h3>
+        <h3  className={footer.support}>Support</h3>
             <ul className={footer.list}>
                 <li className={footer.listItems}>FAQs</li>
                 <li className={footer.listItems}>Support Center</li>
