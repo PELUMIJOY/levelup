@@ -3,7 +3,7 @@ import hero from "../Hero/Hero.module.css"
 import flower from "../../assets/flower.svg"
 import food from "../../assets/food.svg"
 import code from "../../assets/code.svg"
-import job from "../../assets/job.svg"
+import job from "../../assets/Job.svg"
 import mentor from "../../assets/mentor.svg"
 import resources from "../../assets/resources.svg"
 
