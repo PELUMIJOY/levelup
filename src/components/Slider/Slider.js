@@ -1,65 +1,63 @@
 // import soft from '../../assets/cater.svg'
+// import img1 from "../../assets/brick.svg"
+import cater from "../../assets/cater.svg"
+import hairdress from "../../assets/hairdressing.svg"
+import barbing from "../../assets/barbing.svg"
+import plastery from "../../assets/plastery.svg"
+import gele from "../../assets/gele.svg"
+import software from "../../assets/software.svg"
+import data from "../../assets/data.svg"
+import graphics from "../../assets/graphics.svg"
+import digital from "../../assets/Digital.svg"
    export const slides= [
-    {
-        "image": "../../assets/brick.svg",
-        "desc": "brick",
-    },
-    {
-        "image": "/../../assets/hairdressing.svg",
-        "desc": "Hair dressing",
-    },
-    {
-        "image": "../../assets/hair.svg",
-        "desc": "Hair",
-    },
-    {
-        "image": "../../assets/barbing.svg",
-        "desc": "Barbing",
-    },
-//        { 
+//     {
+// "title":"Vocational Skills"
+//     },
+    
+       { 
         
-//         "image": "../assets/cater.svg",
-//         "desc": "Catering"
-//     },
-//     { 
-//         "image": "./assets/hairdressing.svg",
-//         "desc": "Hair Dressing"
-//     },
-//       { 
-//         "image": "./assets/barbing.svg",
-//         "desc": "Barbing"
-//     },
-//     { 
-//         "image": "./assets/plastery.svg",
-//         "desc": "Plastery"
-//     },
-//      { 
-//         "image": "./assets/gele.svg",
-//         "desc": "Hair Dressing"
-//     },
-//     { 
-//         "image": "./assets/hair.svg",
-//         "disc": "Hair Dressing"
-//     },
-//      { 
-//         "image1": "./assets/software.svg",
-//         "desc": "Software Development"
-//     },
-//    { 
-//         "image1": "./assets/data.svg",
-//         "desc": "Data Analysis"
-//     },
-//     { 
-//         "image1": "./assets/graphics.svg",
-//         "desc": "Graphic Design"
-//     },
-//     { 
-//         "image1": "./assets/Digital.svg",
-//         "desc": "Digital Marketing"
-//     },
-//     { 
-//         "image1": "./assets/software.svg",
-//         "desc": "Software Development"
-//     },
+        "image": cater,
+        "desc": "Catering"
+    },
+    { 
+        "image": hairdress,
+        "desc": "Hair Dressing"
+    },
+      { 
+        "image":barbing ,
+        "desc": "Barbing"
+    },
+    { 
+        "image": plastery,
+        "desc": "Plastery"
+    },
+     { 
+        "image":gele ,
+        "desc": "Gele"
+    },
+    // { 
+    //     "image": "./assets/hair.svg",
+    //     "disc": "Hair Dressing"
+    // },
+     { 
+        "image1": software,
+        "desc1": "Software Development"
+    },
+   { 
+        "image1":data ,
+        "desc1": "Data Analysis"
+    },
+    { 
+        "image1": graphics,
+        "desc1": "Graphic Design"
+    },
+    { 
+        "image1": digital,
+        "desc1": "Digital Marketing"
+    },
+    // { 
+    //     "image1": "./assets/software.svg",
+    //     "desc": "Software Development"
+    // },
    
     ]

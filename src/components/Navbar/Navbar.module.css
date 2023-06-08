@@ -1,7 +1,6 @@
 .wrapper{
     background: linear-gradient(109.07deg, #2E1583 16.88%, #C24AEC 79.15%);
     margin: 10px;
-    /* position: relative; */
 }
 .head{
     display: flex;
@@ -21,21 +20,45 @@
     padding: 2px;
     font-weight: 700;
 }
-.right{
+/* .right{
     color: white;
     padding: 20px;
+} */
+.right{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
 }
-.right a{
-    text-decoration: none;
-    color: white;
-    padding: 10px;
+    #rightNav{
+     display: flex;
+     align-items: center;
+     gap: 25px;
+    }
+    .link{
+        text-decoration: none;
+        color: #ffffff; 
+    }
+  
+.item {
+    display: flex;
+    align-items: center;
     font-size: 18px;
-    
-}
+    color: #ffffff;
+    /* background-color: red; */
+  }
+
 .log{
     border: 2px solid white;
     border-radius: 30px;
-    padding:  20px;   
+    padding:5px  20px 5px 20px;   
+}
+#mobile {
+    display: none;
+  }
+.showonsmscreen{
+    display: none;
+    width: 100%;
 }
 .bottom {
     display: flex;
@@ -80,16 +103,11 @@ width: 50%;
     display: flex;
     flex-direction: column;
 }
-img{
-   
-    /* border-radius: 50%;
-    border: 3px solid #fff; */
-    
-}
+
 .cat{
     position: absolute;
     left: 900px;
-     top: 80px; 
+     top: 100px; 
      width: 250px;
      border-radius: 50%;
      border: 3px solid #fff;
@@ -100,9 +118,9 @@ img{
     top: 380px;
     width: 180px;
     border-radius: 50%;
-    border: 3px solid #fff;
-   
+    border: 3px solid #fff;  
 }
+
 .code{
     position: absolute;
     left: 750px;
@@ -111,6 +129,7 @@ img{
     border-radius: 50%;
     border: 3px solid #fff;
 }
+
 .fas{
     position: absolute;
     left: 980px;
@@ -121,10 +140,51 @@ img{
 } 
 
 @media(max-width:768px){
+    .showonsmscreen{
+        /* display: block; */
+        /* background-color: red; */
+    }
     .right{
-        display: none;
+        display: block;
+
     } 
-    
+    #rightNav {
+  
+         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-self: start; 
+        position: fixed;
+         padding: 20px;
+         margin-right: 40px;
+        top: 90px;
+        right: -300px;
+         width: 200px;
+        height: 40vh;
+        background-color:linear-gradient(109.07deg, #2E1583 16.88%, #C24AEC 79.15%);
+       
+        box-shadow: 0 20px 30px #2E1583 ;
+        z-index: 10;/* ensures the div always displays over other element & not behind them   */
+      }
+
+      #rightNav.active {
+        right: 0px;
+
+      }
+      .item {
+        /* margin-bottom: 15px; */
+      /* flex-flow:column nowrap; */
+      }
+      #mobile {
+        display: block;
+      }
+
+      #mobile i {
+        font-size: 24px;
+        cursor: pointer;
+        color: #ffffff;
+      }
+
     .bottom{
         display: block;
     }

@@ -1,12 +1,19 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, {useState} from "react";
 import brick from "../../assets/brick.svg"
 import catering from "../../assets/catering.svg"
 import code from "../../assets/code.svg"
 import fashion from "../../assets/fashion.svg"
 import nav from "./Navbar.module.css"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const[open, setOpen]=useState({clicked:false})
+  const handleClick =()=>{
+    setOpen(open=>({
+      clicked: !open.clicked
+    }))
+  }
   return (
     <>
       <section  className= {nav.wrapper}>
@@ -16,13 +23,97 @@ const Navbar = () => {
             Charit<span className="nav-leftspan">Able</span>
           </p>
         </div>
-        <div className={nav.right}>
+        {/* <div className={nav.right}>
           <a href="" >Home</a>
           <a href="" >About Us</a>
           <a href="" >Services</a>
           <a href="">Contact</a>
           <a href="" className={nav.log}>Login</a>
-        </div>
+        </div> */}
+
+
+        <div className={nav.right}>
+              <div
+                id={nav.rightNav}
+                className={open.clicked ? '#rightNav active' : '#rightNav'}
+              >
+                <div className={nav.item}>
+                <Link className={nav.link} to='#'>
+                    Home
+                  </Link>
+                </div>
+                <div className={nav.item}>
+                <Link className={nav.link} to='#About'>
+                    About
+                  </Link>
+                </div>
+                <div className={nav.item}>
+                <Link className={nav.link} to='#'>
+                  Services
+                  </Link>
+                </div>
+                <div className={nav.item}>
+                <Link className={nav.link} to='#Contact'>
+                    Contact
+                  </Link>
+                </div>
+                <div className={nav.item}>
+                <Link className={`${nav.link} ${nav.log}`} to='/'>
+                    Login
+                  </Link>
+                </div>
+               
+              </div>
+              <div id={nav.mobile} onClick={handleClick}>
+                <i
+                  id={nav.bar}
+                  className={ open.clicked ?'fas fa-times' : 'fas fa-bars'}
+                ></i>
+              </div>
+            </div>  
+
+              {/* SHOW ONLY ON MEDIUM AND SMALL SCREEN */}
+              {/* <div className={nav.showonsmscreen}>
+              <div className={nav.right}>
+              <div
+                id={nav.rightNav}
+                className={open.clicked ? '#rightNav active' : 'rightNav'}
+              >
+                <div className={nav.item}>
+                <Link className={nav.link} to='#'>
+                    Home
+                  </Link>
+                </div>
+                <div className={nav.item}>
+                <Link className={nav.link} to='#About'>
+                    About
+                  </Link>
+                </div>
+                <div className={nav.item}>
+                <Link className={nav.link} to='#'>
+                  Services
+                  </Link>
+                </div>
+                <div className={nav.item}>
+                <Link className={nav.link} to='#Contact'>
+                    Contact
+                  </Link>
+                </div>
+                <div className={nav.item}>
+                <Link className={`${nav.link} ${nav.log}`} to='/'>
+                    Login
+                  </Link>
+                </div>
+               
+              </div>
+              <div id={nav.mobile} onClick={handleClick}>
+                <i
+                  id={nav.bar}
+                  className={open.clicked ? 'fas fa-times' : 'fas fa-bars'}
+                ></i>
+              </div>
+            </div>   */}
+              {/* </div> */}
 
         </div>
         <section className= {nav.bottom} >
