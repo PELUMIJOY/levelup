@@ -9,8 +9,8 @@ const signUp = () => {
             Charit<span className={sign.leftspan}>Able</span>
           </h3>
           <div className={sign.content}>
-           <h2 className={sign.center}>Welcome Back!</h2>
-            <p className={sign.center1}>To connect with us, Please Log In with your personal information.</p>
+           <h2 className={sign.center}>Welcome!</h2>
+            <p className={sign.center1}>To connect with us, Please Sign Up with your personal information.</p>
             <button className={sign.btn}>Signup</button>
           </div>
         

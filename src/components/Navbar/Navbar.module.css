@@ -167,7 +167,7 @@ width: 50%;
         z-index: 10;/* ensures the div always displays over other element & not behind them   */
       }
 
-      #rightNav.active {
+      #rightNav .active {
         right: 0px;
 
       }

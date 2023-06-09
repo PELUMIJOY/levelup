@@ -9,6 +9,7 @@ import software from "../../assets/software.svg"
 import data from "../../assets/data.svg"
 import graphics from "../../assets/graphics.svg"
 import digital from "../../assets/Digital.svg"
+import ui from "../../assets/ui:ux.svg"
    export const slides= [
 //     {
 // "title":"Vocational Skills"
@@ -29,35 +30,38 @@ import digital from "../../assets/Digital.svg"
     },
     { 
         "image": plastery,
-        "desc": "Plastery"
+        "desc": "Pastries/ Confectionery"
     },
      { 
         "image":gele ,
-        "desc": "Gele"
+        "desc": "Make Up/ Gele Tying"
     },
     // { 
     //     "image": "./assets/hair.svg",
     //     "disc": "Hair Dressing"
     // },
-     { 
-        "image1": software,
-        "desc1": "Software Development"
-    },
-   { 
-        "image1":data ,
-        "desc1": "Data Analysis"
-    },
-    { 
-        "image1": graphics,
-        "desc1": "Graphic Design"
-    },
-    { 
-        "image1": digital,
-        "desc1": "Digital Marketing"
-    },
-    // { 
-    //     "image1": "./assets/software.svg",
-    //     "desc": "Software Development"
-    // },
-   
+    
+
+        { 
+           "image1": software,
+           "desc1": "Software Development"
+       },
+      { 
+           "image1":data ,
+           "desc1": "Data Analysis"
+       },
+       { 
+           "image1": graphics,
+           "desc1": "Graphic Design"
+       },
+       { 
+           "image1": digital,
+           "desc1": "Digital Marketing"
+       },
+       { 
+           "image1":  ui ,
+           "desc1": "UI/UX Design"
+       },
+      
+       
     ]

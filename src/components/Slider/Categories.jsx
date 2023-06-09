@@ -5,16 +5,17 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';  
 import 'swiper/swiper-bundle.min.css';
+import cat from "./Categories.module.css"
 
 
 
 
 const Categories = ({slides}) => {
   return (
-  <>
-    <h2>Our Training Tracks</h2>
+  <div className={cat.wrapper}>
+    <h2 className={cat.heading}>Our Training Tracks</h2>
     <div>
-    <h3>Vocational Skills</h3>
+    <h3 className={cat.skills}>Vocational Skills</h3>
 
     <Swiper
     modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -22,7 +23,7 @@ const Categories = ({slides}) => {
     slidesPerView={4}
     navigation
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+      // scrollbar={{ draggable: true }}
     onSlideChange={() => console.log('slide change')}
     onSwiper={(swiper) => console.log(swiper)}
   >
@@ -30,9 +31,9 @@ const Categories = ({slides}) => {
   {slides.map((slide)=>(
 
     <SwiperSlide key={slide.desc}>
-       <img src={slide.tittle}alt="" />
-      <img src={slide.image}alt="" />
-      <p key={slide.desc}> {slide.desc} </p>
+      {/* <p>className={cat.img} src={slide.tittle} </p> */}
+      <img className={cat.img} src={slide.image}alt="" />
+      <p className={cat.desc}  key={slide.desc}> {slide.desc} </p>
     </SwiperSlide>
   ))}
     {/* <SwiperSlide>Slide 3</SwiperSlide>
@@ -45,7 +46,7 @@ const Categories = ({slides}) => {
     </div>
 <div>
 
-  <h3>Vocational Skills</h3>
+  <h3 className={cat.skills}>Human Capacity Development Skills</h3>
 
     <Swiper
     modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -53,7 +54,7 @@ const Categories = ({slides}) => {
     slidesPerView={4}
     navigation
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+      // scrollbar={{ draggable: true }}
     onSlideChange={() => console.log('slide change')}
     onSwiper={(swiper) => console.log(swiper)}
   >
@@ -61,15 +62,15 @@ const Categories = ({slides}) => {
   {slides.map((slide)=>(
 
     <SwiperSlide key={slide.desc1}>
-      <img src={slide.image1}alt="" />
-      <p key={slide.desc1}> {slide.desc1} </p>
+      <img className={cat.img} src={slide.image1}alt="" />
+      <p className={cat.desc} key={slide.desc1}> {slide.desc1} </p>
     </SwiperSlide>
   ))}
 
   </Swiper>
 </div>
 
-  </>
+  </div>
   )
 }
 
