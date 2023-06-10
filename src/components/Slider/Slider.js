@@ -40,28 +40,28 @@ import ui from "../../assets/ui:ux.svg"
     //     "image": "./assets/hair.svg",
     //     "disc": "Hair Dressing"
     // },
-    
-
-        { 
-           "image1": software,
-           "desc1": "Software Development"
-       },
-      { 
-           "image1":data ,
-           "desc1": "Data Analysis"
-       },
-       { 
-           "image1": graphics,
-           "desc1": "Graphic Design"
-       },
-       { 
-           "image1": digital,
-           "desc1": "Digital Marketing"
-       },
-       { 
-           "image1":  ui ,
-           "desc1": "UI/UX Design"
-       },
-      
-       
+        
     ]
+    
+ export const slides1=[
+    { 
+        "image1": software,
+        "desc1": "Software Development"
+    },
+   { 
+        "image1":data ,
+        "desc1": "Data Analysis"
+    },
+    { 
+        "image1": graphics,
+        "desc1": "Graphic Design"
+    },
+    { 
+        "image1": digital,
+        "desc1": "Digital Marketing"
+    },
+    { 
+        "image1":  ui ,
+        "desc1": "UI/UX Design"
+    },
+]

@@ -10,7 +10,7 @@ import cat from "./Categories.module.css"
 
 
 
-const Categories = ({slides}) => {
+const Categories = ({slides, slides1}) => {
   return (
   <div className={cat.wrapper}>
     <h2 className={cat.heading}>Our Training Tracks</h2>
@@ -59,7 +59,7 @@ const Categories = ({slides}) => {
     onSwiper={(swiper) => console.log(swiper)}
   >
   
-  {slides.map((slide)=>(
+  {slides1.map((slide)=>(
 
     <SwiperSlide key={slide.desc1}>
       <img className={cat.img} src={slide.image1}alt="" />

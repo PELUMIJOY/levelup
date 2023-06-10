@@ -39,7 +39,14 @@
         text-decoration: none;
         color: #ffffff; 
     }
+    Link.active{
+        text-decoration: none;
+        color: red;
+    }
   
+    Link{
+        text-decoration: none;
+    }
 .item {
     display: flex;
     align-items: center;
@@ -140,10 +147,7 @@ width: 50%;
 } 
 
 @media(max-width:768px){
-    .showonsmscreen{
-        /* display: block; */
-        /* background-color: red; */
-    }
+   
     .right{
         display: block;
 
@@ -154,20 +158,19 @@ width: 50%;
         flex-direction: column;
         align-items: center;
         justify-self: start; 
-        position: fixed;
+        /* position: fixed; */
          padding: 20px;
          margin-right: 40px;
-        top: 90px;
-        right: -300px;
+         top: 90px;
+        right: -300px; 
          width: 200px;
         height: 40vh;
         background-color:linear-gradient(109.07deg, #2E1583 16.88%, #C24AEC 79.15%);
-       
         box-shadow: 0 20px 30px #2E1583 ;
-        z-index: 10;/* ensures the div always displays over other element & not behind them   */
+         z-index: 10;  /*ensures the div always displays over other element & not behind them   */
       }
 
-      #rightNav .active {
+      #rightNav.active {
         right: 0px;
 
       }

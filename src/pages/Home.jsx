@@ -6,7 +6,7 @@ import Hero from '../components/Hero/Hero'
 import Join from '../components/Join/Join'
 
 import Categories from '../components/Slider/Categories'
-import {slides} from "../components/Slider/Slider.js"
+import {slides, slides1} from "../components/Slider/Slider.js"
 import Testi from "../components/Testismony/Testi"
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
     <div>
     {/* <Navbar/> */}
      <Hero/>
-    <Categories slides={slides}/>
+    <Categories slides={slides} slides1={slides1}/>
     <Testi/>
     <Join/>
      <Contact/>

@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import { Link } from "react-router-dom"
 import sign from "../sign-up/signup.module.css"
 
 const Login = () => {
@@ -12,7 +13,7 @@ const Login = () => {
           <div className={sign.content}>
            <h2 className={sign.center}>Welcome Back!</h2>
             <p className={sign.center1}>To connect with us, Please Log In with your personal information.</p>
-            <button className={sign.btn}>Log In</button>
+            <Link to='/signup' className={sign.btn}>Sign Up</Link>
           </div>
         
         
@@ -36,7 +37,7 @@ const Login = () => {
                 <input type="password" placeholder="Password"  className={sign.input} required/>
                 {/* <input type="submit" value={signUp}/> */}
                 <button type="submit"  className={sign.inputbtn}>Log In</button>
-                <p className={sign.inputpara}> Don't have an account? <a className={sign.inputlink} href="#">Sign up</a></p>
+                <p className={sign.inputpara}> Don't have an account? <Link className={sign.inputlink} to="/signup">Sign up</Link></p>
               </form>
               <div className={sign.break}>
                <hr /> <p>OR</p> <hr />

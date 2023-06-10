@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom"
 import sign from "./signup.module.css"
 
 const signUp = () => {
@@ -11,7 +12,7 @@ const signUp = () => {
           <div className={sign.content}>
            <h2 className={sign.center}>Welcome!</h2>
             <p className={sign.center1}>To connect with us, Please Sign Up with your personal information.</p>
-            <button className={sign.btn}>Signup</button>
+            <Link to={'/log'} className={sign.btn}>Login</Link>
           </div>
         
         
@@ -35,11 +36,13 @@ const signUp = () => {
                 <input type="password" placeholder="Password"  className={sign.input} required/>
                 {/* <input type="submit" value={signUp}/> */}
                 <button type="submit"  className={sign.inputbtn}>Sign Up</button>
-                <p className={sign.inputpara}>Already have account? <a className={sign.inputlink} href="#">Log In</a></p>
+                <p className={sign.inputpara}>Already have account? <Link className={sign.inputlink} to="/log">Log In</Link></p>
               </form>
               <div className={sign.break}>
                <hr /> <p>OR</p> <hr />
+          
               </div>
+
          
 
             <div className={sign.bottom}>

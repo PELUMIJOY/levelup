@@ -8,6 +8,7 @@ import nav from "./Navbar.module.css"
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [activeNav, setActiveNav] =useState("#")
   const[open, setOpen]=useState({clicked:false})
   const handleClick =()=>{
     setOpen(open=>({
@@ -33,43 +34,51 @@ const Navbar = () => {
 
 
         <div className={nav.right}>
-              <div
-                id={nav.rightNav}
-                className={open.clicked ? '#rightNav active' : '#rightNav'}
-              >
-                <div className={nav.item}>
-                <Link className={nav.link} to='#'>
-                    Home
-                  </Link>
-                </div>
-                <div className={nav.item}>
-                <Link className={nav.link} to='#About'>
-                    About
-                  </Link>
-                </div>
-                <div className={nav.item}>
-                <Link className={nav.link} to='#'>
-                  Services
-                  </Link>
-                </div>
-                <div className={nav.item}>
-                <Link className={nav.link} to='#Contact'>
-                    Contact
-                  </Link>
-                </div>
-                <div className={nav.item}>
-                <Link className={`${nav.link} ${nav.log}`} to='/'>
-                    Login
-                  </Link>
-                </div>
-               
-              </div>
-              <div id={nav.mobile} onClick={handleClick}>
+        <div id={nav.mobile} onClick={handleClick} >
                 <i
                   id={nav.bar}
                   className={ open.clicked ?'fas fa-times' : 'fas fa-bars'}
                 ></i>
               </div>
+              <div
+                id={nav.rightNav }  
+                // className={open.clicked ? {nav.rightNav} : ''}
+              >
+               {open.clicked ?                
+               <>
+                <div className={nav.item}>
+                <Link  to='#' onClick={()=>setActiveNav("#")} className={`${activeNav==="#" ? "active": ""} ${nav.link}`}>
+                    Home
+                  </Link>
+                </div>
+                <div className={nav.item}>
+                <Link to='#about' onClick={()=>setActiveNav('#about')} className={`${activeNav === "#about" ? "active" : ''} ${nav.link} `}>
+                    About
+                  </Link>
+                </div> 
+                <div className={nav.item}>
+                <Link  to='#' onClick={()=>setActiveNav('#service') } className={`${activeNav==="#service" ? "active" : "" } ${nav.link}`}>
+                  Services
+                  </Link>
+                </div>
+                <div className={nav.item}>
+                <Link to='#contact' onClick={()=>setActiveNav('#contact')} className={ `${activeNav === "#contact" ? "active" : ""} ${nav.link} `}>
+                    Contact
+                  </Link>
+                </div>
+                <div className={nav.item}>
+                <Link className={`${nav.link} ${nav.log}`} to='/log'>
+                    Login
+                  </Link>
+                </div>
+               
+                </>
+                :
+                <>
+                </>
+              }
+              </div>
+              
             </div>  
 
               {/* SHOW ONLY ON MEDIUM AND SMALL SCREEN */}
@@ -125,7 +134,7 @@ const Navbar = () => {
               Reach your dreams through Discovering and Exploring your
               potentials. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do euismod tempor
             </p>
-            <button className={nav.btn}>Get started</button>
+            <Link className={ `${nav.link} ${nav.btn}`} to='/signup'>Get started </Link>
           </div>
           <div className={nav.img}>
             <img className={nav.cat} src={catering} alt="" />

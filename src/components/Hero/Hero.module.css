@@ -75,8 +75,6 @@
     font-size: 30px;
     text-align: center;
     padding: 10px;
-
-
 }
  .study{
     display: flex;
@@ -106,15 +104,13 @@ font-weight: 600;
         border: none;
         width: 500px;
         height: 300px;
-    
     }
     .flo{ 
-    
         left:150px;
         top:650px;
     }
+
     .food{
-       
         left:400px;
         top:980px; 
     }

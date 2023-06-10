@@ -10,7 +10,7 @@ import resources from "../../assets/resources.svg"
 
 const Hero = () => {
   return (
-    <div>
+    <div id="about">
         <div className={hero.wraper}>
           <div className={hero.left}>
             <img className={hero.flo} src={flower} alt=""/>
