@@ -1,4 +1,4 @@
-import testy from "./testi.module.css"
+import testy from "./Testi.module.css"
 import mat from "../../assets/mat.svg"
 import dan from "../../assets/dan.svg"
 import nap from "../../assets/nap.svg"

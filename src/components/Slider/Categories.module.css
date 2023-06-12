@@ -29,8 +29,9 @@
     .img{
         width:auto;
     }
+
     --swiper-navigation-size{
-        font-size:30px; ;
+        font-size:30px;
     }
 }
 
@@ -47,16 +48,7 @@ justify-content: center;
     .img{
        width: auto;
     }
-    --swiper-navigation-size{
-        font-size:2px;
-        /* align-items: center; */
-    }
-    .desc{
-        /* padding-left: 10px;
-         font-size: 15px;  */
-        /* gap:1rem; */
-        /* line-height: 2rem; */
-    }
+
     
     
 }
