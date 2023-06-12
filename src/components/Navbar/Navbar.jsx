@@ -118,12 +118,7 @@ const Navbar = () => {
 }
               </div>
                 
-              {/* <div id={nav.mobile} onClick={handleClick}>
-                <i
-                  id={nav.bar}
-                  className={open.clicked ? 'fas fa-times' : 'fas fa-bars'}
-                ></i>
-              </div> */}
+              
             </div>   
                </div>
 
