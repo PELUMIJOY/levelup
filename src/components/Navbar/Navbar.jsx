@@ -21,7 +21,7 @@ const Navbar = () => {
         <div className={nav.head}>
         <div>
           <p className={nav.left}>
-            Charit<span className="nav-leftspan">Able</span>
+            Charit<span className={nav.leftspan}>Able</span>
           </p>
         </div>
         {/* <div className={nav.right}>
@@ -32,39 +32,33 @@ const Navbar = () => {
           <a href="" className={nav.log}>Login</a>
         </div> */}
 
-
+<div className={nav.showonlgscreen}>
         <div className={nav.right}>
-        <div id={nav.mobile} onClick={handleClick} >
-                <i
-                  id={nav.bar}
-                  className={ open.clicked ?'fas fa-times' : 'fas fa-bars'}
-                ></i>
-              </div>
+        
               <div
                 id={nav.rightNav }  
                 // className={open.clicked ? {nav.rightNav} : ''}
               >
-               {open.clicked ?                
-               <>
+             
                 <div className={nav.item}>
-                <Link  to='#' onClick={()=>setActiveNav("#")} className={`${activeNav==="#" ? "active": ""} ${nav.link}`}>
+                <a href='#' onClick={()=>setActiveNav("#")} className={`${activeNav==="#" ? "active": ""} ${nav.link}`}>
                     Home
-                  </Link>
+                  </a>
                 </div>
                 <div className={nav.item}>
-                <Link to='#about' onClick={()=>setActiveNav('#about')} className={`${activeNav === "#about" ? "active" : ''} ${nav.link} `}>
+                <a href='#about' onClick={()=>setActiveNav('#about')} className={`${activeNav === "#about" ? "active" : ''} ${nav.link} `}>
                     About
-                  </Link>
+                  </a>
                 </div> 
                 <div className={nav.item}>
-                <Link  to='#' onClick={()=>setActiveNav('#service') } className={`${activeNav==="#service" ? "active" : "" } ${nav.link}`}>
+                <a  href='#service' onClick={()=>setActiveNav('#service') } className={`${activeNav==="#service" ? "active" : "" } ${nav.link}`}>
                   Services
-                  </Link>
+                  </a>
                 </div>
                 <div className={nav.item}>
-                <Link to='#contact' onClick={()=>setActiveNav('#contact')} className={ `${activeNav === "#contact" ? "active" : ""} ${nav.link} `}>
+                <a href='#contact' onClick={()=>setActiveNav('#contact')} className={ `${activeNav === "#contact" ? "active" : ""} ${nav.link} `}>
                     Contact
-                  </Link>
+                  </a>
                 </div>
                 <div className={nav.item}>
                 <Link className={`${nav.link} ${nav.log}`} to='/log'>
@@ -72,57 +66,66 @@ const Navbar = () => {
                   </Link>
                 </div>
                
-                </>
-                :
-                <>
-                </>
-              }
               </div>
               
             </div>  
+            </div>
 
               {/* SHOW ONLY ON MEDIUM AND SMALL SCREEN */}
-              {/* <div className={nav.showonsmscreen}>
+              <div className={nav.showonsmscreen}>
               <div className={nav.right}>
+              <div id={nav.mobile} onClick={handleClick} >
+                <i
+                  id={nav.bar}
+                  className={ open.clicked ?'fas fa-times' : 'fas fa-bars'}
+                ></i>
+              </div>
               <div
                 id={nav.rightNav}
                 className={open.clicked ? '#rightNav active' : 'rightNav'}
               >
+                {open.clicked ?  
+                <>
                 <div className={nav.item}>
-                <Link className={nav.link} to='#'>
+                <a  href='#' onClick={()=>setActiveNav('#')} className={`${activeNav ==="#"?"active" :""} ${nav.link}` }>
                     Home
-                  </Link>
+                  </a>
                 </div>
                 <div className={nav.item}>
-                <Link className={nav.link} to='#About'>
+                <a  href='#about' onClick={()=>setActiveNav("#about")} className={`${activeNav=== "#about" ? "active" :""} ${nav.link}`}>
                     About
-                  </Link>
+                  </a>
                 </div>
                 <div className={nav.item}>
-                <Link className={nav.link} to='#'>
+                <a  href='#service' onClick={()=>setActiveNav('#service')} className={`${activeNav === "#service" ? "active" : ""} ${nav.link}`}>
                   Services
-                  </Link>
+                  </a>
                 </div>
                 <div className={nav.item}>
-                <Link className={nav.link} to='#Contact'>
+                <a  href='#contact' onClick={()=> setActiveNav('#content')} className={`${activeNav==="#contact" ? "active" : ""} ${nav.link}`}>
                     Contact
-                  </Link>
+                  </a>
                 </div>
                 <div className={nav.item}>
-                <Link className={`${nav.link} ${nav.log}`} to='/'>
+                <Link className={`${nav.link} ${nav.log}`} to='/log'>
                     Login
                   </Link>
                 </div>
-               
+                </> 
+                :
+                <>
+                </>
+}
               </div>
-              <div id={nav.mobile} onClick={handleClick}>
+                
+              {/* <div id={nav.mobile} onClick={handleClick}>
                 <i
                   id={nav.bar}
                   className={open.clicked ? 'fas fa-times' : 'fas fa-bars'}
                 ></i>
-              </div>
-            </div>   */}
-              {/* </div> */}
+              </div> */}
+            </div>   
+               </div>
 
         </div>
         <section className= {nav.bottom} >
@@ -130,7 +133,7 @@ const Navbar = () => {
             <h1 className="	">
               Get equipped to <span  className={nav.span}> take over the world</span>
             </h1>
-            <p className=" 	">
+            <p className={nav.bottompara}>
               Reach your dreams through Discovering and Exploring your
               potentials. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do euismod tempor
             </p>
@@ -138,7 +141,7 @@ const Navbar = () => {
           </div>
           <div className={nav.img}>
             <img className={nav.cat} src={catering} alt="" />
-            <img className={nav.brick } src={brick} alt="" />
+            <img className={nav.brick} src={brick} alt="" />
             <img className={nav.code} src={code} alt="" />
             <img className= {nav.fas } src={fashion} alt="" />
         

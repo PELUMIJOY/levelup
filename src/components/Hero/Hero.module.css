@@ -8,6 +8,7 @@
 }
 .left{
     margin: 10%;
+    position: relative;
 }
 .code{
     border-radius: 10px;
@@ -21,16 +22,16 @@
     border: 1px solid #fff;
     position: absolute; 
     width: 150px;
-    left:110px;
-    top:650px;
+    left:-50px;
+    top:-100px;
 }
 .food{
     border-radius: 10px;
     border: 1px solid #fff;
     position: absolute; 
     width: 150px;
-    left:360px;
-    top:1000px; 
+    left:200px;
+    top:250px; 
 }
 
 .right{
@@ -106,13 +107,13 @@ font-weight: 600;
         height: 300px;
     }
     .flo{ 
-        left:150px;
-        top:650px;
+        left:40px;
+        top:-70px;
     }
 
     .food{
-        left:400px;
-        top:980px; 
+        left:300px;
+        top:250px; 
     }
     .about{
         /* margin-top: 50px; */

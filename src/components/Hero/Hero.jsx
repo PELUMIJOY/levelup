@@ -25,7 +25,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <section className={hero.Us}>
+        <section className={hero.Us} >
           <h1 className={hero.whyUs}> Why US?</h1>
           <div className={hero.study}>
          <div className={hero.content}>   

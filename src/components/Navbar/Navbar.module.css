@@ -5,25 +5,23 @@
 .head{
     display: flex;
     justify-content: space-between; 
-    margin: 2rem;
-    
+    margin: 2rem;    
 }
+
 .left{
     color:white;
     padding: 10px;
     font-weight: 800;
     font-size: 20px;
 }
+
 .leftspan{        
     background: white;
     color: #2E1583;
     padding: 2px;
     font-weight: 700;
 }
-/* .right{
-    color: white;
-    padding: 20px;
-} */
+
 .right{
     display: flex;
     align-items: center;
@@ -76,7 +74,7 @@
     border: 1px solid white;
     border-radius: 20px;
     font-size: 16px;
-    padding: 10px;
+    padding: 10px;    
 }
 .bottomRight{
 margin: 2rem;
@@ -147,37 +145,41 @@ width: 50%;
 } 
 
 @media(max-width:768px){
-   
+    .wrapper{
+        height: 100vh;
+    }
+    .showonlgscreen{
+        display: none;
+    }
+    .showonsmscreen{
+    display: block;
+}   
     .right{
         display: block;
-
     } 
+
     #rightNav {
-  
-         display: flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-self: start; 
-        /* position: fixed; */
-         padding: 20px;
-         margin-right: 40px;
-         top: 90px;
-        right: -300px; 
-         width: 200px;
-        height: 40vh;
-        background-color:linear-gradient(109.07deg, #2E1583 16.88%, #C24AEC 79.15%);
-        box-shadow: 0 20px 30px #2E1583 ;
-         z-index: 10;  /*ensures the div always displays over other element & not behind them   */
+        position: fixed;
+        padding: 20px;
+        margin-right: 40px;
+        top: 90px;
+        /* right: -300px;  */
+         width: 100px;
+         height: 40vh;
+        /* background-color:linear-gradient(109.07deg, #2E1583 16.88%, #C24AEC 79.15%);
+        box-shadow: 0 20px 30px #2E1583 ; */
+        z-index: 10;     /*ensures the div always displays over other element & not behind them   */
       }
 
       #rightNav.active {
         right: 0px;
 
       }
-      .item {
-        /* margin-bottom: 15px; */
-      /* flex-flow:column nowrap; */
-      }
+     
       #mobile {
         display: block;
       }
@@ -191,9 +193,7 @@ width: 50%;
     .bottom{
         display: block;
     }
-    .btn{
-margin-bottom: 10px;
-    }
+   
     .img{
         display: none;
     }
@@ -224,6 +224,7 @@ margin-bottom: 10px;
     } 
 }
 @media(max-width:600px){
+  
     .bottomRight{
         width: 100%;
     }
@@ -233,7 +234,10 @@ margin-bottom: 10px;
     }
     .bottomRight p{
        font-size: 15px;
-       width: 80%;
-
+       width: 80%;  
+       margin-bottom: 40px;
+    }
+    .btn{
+        margin-top: 20px;
     }
 }

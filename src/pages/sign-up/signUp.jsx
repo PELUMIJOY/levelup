@@ -12,7 +12,7 @@ const signUp = () => {
           <div className={sign.content}>
            <h2 className={sign.center}>Welcome!</h2>
             <p className={sign.center1}>To connect with us, Please Sign Up with your personal information.</p>
-            <Link to={'/log'} className={sign.btn}>Login</Link>
+            <Link to='/log' className={sign.btn}>Login</Link>
           </div>
         
         

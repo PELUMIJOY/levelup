@@ -12,12 +12,13 @@ import cat from "./Categories.module.css"
 
 const Categories = ({slides, slides1}) => {
   return (
-  <div className={cat.wrapper}>
+  <div className={cat.wrapper} id="service">
     <h2 className={cat.heading}>Our Training Tracks</h2>
     <div>
     <h3 className={cat.skills}>Vocational Skills</h3>
 
     <Swiper
+   
     modules={[Navigation, Pagination, Scrollbar, A11y]}
     spaceBetween={50}
     slidesPerView={4}
@@ -26,6 +27,28 @@ const Categories = ({slides, slides1}) => {
       // scrollbar={{ draggable: true }}
     onSlideChange={() => console.log('slide change')}
     onSwiper={(swiper) => console.log(swiper)}
+
+    breakpoints={{
+      600: {
+        // width: 600,
+        slidesPerView: 1,
+      },
+      425: {
+        // width: 425,
+        slidesPerView: 1,
+      },
+      375: {
+        // width: 375,
+        slidesPerView: 1,
+      },
+      768: {
+        width: 768,
+        slidesPerView: 2,
+      },
+      1000:{
+        slidesPerView:4
+      },
+    }}
   >
   
   {slides.map((slide)=>(
@@ -57,6 +80,26 @@ const Categories = ({slides, slides1}) => {
       // scrollbar={{ draggable: true }}
     onSlideChange={() => console.log('slide change')}
     onSwiper={(swiper) => console.log(swiper)}
+
+
+    breakpoints={{
+      600: {
+        slidesPerView: 1,
+      },
+      425: {
+        slidesPerView: 1,
+      },
+      375: {
+        slidesPerView: 1,
+      },
+      768: {
+        width: 768,
+        slidesPerView: 2,
+      },
+      1000:{
+        slidesPerView:4
+      },
+    }}
   >
   
   {slides1.map((slide)=>(

@@ -166,6 +166,8 @@ hr{
     /* .container{
        flex-direction: column;
 } */
+
+
 .middle{
   
     width: 70%;
@@ -174,6 +176,9 @@ hr{
 }
 
 @media(max-width:600px){
+    .left{
+        height: 70vh;
+    }
     .container{
         flex-direction: column;
     }

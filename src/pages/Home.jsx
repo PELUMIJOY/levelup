@@ -11,7 +11,7 @@ import Testi from "../components/Testismony/Testi"
 
 const Home = () => {
   return (
-    <div>
+    <div id="home">
     {/* <Navbar/> */}
      <Hero/>
     <Categories slides={slides} slides1={slides1}/>
