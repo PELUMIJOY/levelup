@@ -37,7 +37,7 @@ const Categories = ({slides, slides1}) => {
         // width: 425,
         slidesPerView: 1,
       },
-      375: {
+      280: {
         // width: 375,
         slidesPerView: 1,
       },
@@ -89,14 +89,14 @@ const Categories = ({slides, slides1}) => {
       425: {
         slidesPerView: 1,
       },
-      375: {
+      280: {
         slidesPerView: 1,
       },
       768: {
         width: 768,
         slidesPerView: 2,
       },
-      1000:{
+      1200:{
         slidesPerView:4
       },
     }}

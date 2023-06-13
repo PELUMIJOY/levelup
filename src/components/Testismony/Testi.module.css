@@ -40,6 +40,30 @@
     line-height: 3px;
 }
 
+
+
+@media(max-width:1024px){
+    .flex{
+
+        width: 100%;
+    }
+    .left p{
+        /* width: 210px; */
+        font-size: 12px;
+     
+     }
+     .left h4 {
+        /* width: 210px; */
+        font-size: 12px;
+     
+     }
+     .container{
+        width:100% ;
+     }
+     .containerwrap{
+        /* justify-content: f; */
+     }
+}
 @media(max-width:768px){
     .containerwrap{
         flex-direction: column;
