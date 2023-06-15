@@ -192,6 +192,7 @@ width: 50%;
 }   
     .right{
         display: block;
+        
     } 
 
     #rightNav {
@@ -199,25 +200,29 @@ width: 50%;
         flex-direction: column;
         align-items: center;
         justify-self: start; 
-        position: fixed;
+        position:fixed;
         padding: 20px;
         margin-right: 40px;
         top: 90px;
         /* right: -300px;  */
          width: 100px;
          height: 40vh;
-        /* background-color:linear-gradient(109.07deg, #2E1583 16.88%, #C24AEC 79.15%);
-        box-shadow: 0 20px 30px #2E1583 ; */
-        z-index: 10;     /*ensures the div always displays over other element & not behind them   */
+        background-color:  #481F72;
+        box-shadow: 0 20px 30px #2E1583 ;
+        z-index: 10;      /*ensures the div always displays over other element & not behind them   */
       }
 
       #rightNav.active {
         right: 0px;
 
       }
-     
+     .item{
+    
+     }
       #mobile {
-        display: block;
+        display: flex;
+     justify-content: flex-end;
+   
       }
 
       #mobile i {
@@ -234,12 +239,6 @@ width: 50%;
         display: block;
     }
     .cat{
-        /* position: static;
-         left: 0px;
-         top: 0px;   */
-         /* width: 250px; 
-
-          /* position: absolute; */
          left: 450px; 
           top: 300px; 
           width: 250px;

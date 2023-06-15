@@ -80,12 +80,14 @@ const Navbar = () => {
                   className={ open.clicked ?'fas fa-times' : 'fas fa-bars'}
                 ></i>
               </div>
+              {open.clicked ?  
+                <>
+             
               <div
                 id={nav.rightNav}
                 className={open.clicked ? '#rightNav active' : 'rightNav'}
               >
-                {open.clicked ?  
-                <>
+             
                 <div className={nav.item}>
                 <a  href='#' onClick={()=>setActiveNav('#')} className={`${activeNav ==="#"?"active" :""} ${nav.link}` }>
                     Home
@@ -111,16 +113,18 @@ const Navbar = () => {
                     Login
                   </Link>
                 </div>
-                </> 
+               
+              </div>
+              </> 
                 :
                 <>
                 </>
-}
+} 
               </div>
-                
+           
               
             </div>   
-               </div>
+          
 
         </div>
         <section className= {nav.bottom} >
