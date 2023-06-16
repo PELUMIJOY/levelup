@@ -77,21 +77,37 @@ const Navbar = () => {
               <div id={nav.mobile} onClick={handleClick} >
                 <i
                   id={nav.bar}
-                  className={ open.clicked ?'fas fa-times' : 'fas fa-bars'}
+                  className={open.clicked ? "" : 'fas fa-bars'}
                 ></i>
               </div>
               {open.clicked ?  
                 <>
-             
+       
               <div
-                id={nav.rightNav}
-                className={open.clicked ? '#rightNav active' : 'rightNav'}
+                id={nav.rightNav} style={{display:"flex"}}
+                // className={open.clicked ? '#rightNav active' : 'rightNav'}
               >
+                 {/* <div id={nav.mobile} onClick={handleClick} >
+                <i
+                  id={nav.bar}
+                  className={'fas fa-times'}
+                ></i>
+              </div> */}
              
-                <div className={nav.item}>
-                <a  href='#' onClick={()=>setActiveNav('#')} className={`${activeNav ==="#"?"active" :""} ${nav.link}` }>
+                <div className={nav.item} style={{position:"relative"}}>
+               
+                  <div>
+                  <a  href='#' onClick={()=>setActiveNav('#')} className={`${activeNav ==="#"?"active" :""} ${nav.link}` }>
                     Home
                   </a>
+                  </div>
+                  <div id={nav.mobile1} onClick={handleClick} style={{position:"absolute", top:"-15px", left:"60px" }} >
+                <i
+                  id={nav.bar}
+                  className={'fas fa-times'}
+                ></i>
+              </div>
+                 
                 </div>
                 <div className={nav.item}>
                 <a  href='#about' onClick={()=>setActiveNav("#about")} className={`${activeNav=== "#about" ? "active" :""} ${nav.link}`}>

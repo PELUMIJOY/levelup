@@ -5,6 +5,7 @@ import sign from "./signup.module.css"
 const signUp = () => {
   return (
     <div className={sign.container}>
+      <div className={sign.wrapper} >
         <div className={sign.left}>
           <h3 className={sign.left1}>
             Charit<span className={sign.leftspan}>Able</span>
@@ -50,6 +51,7 @@ const signUp = () => {
                 <button className={sign.bottom1}>Sign Up with Facebook</button>
             </div>
            
+        </div>
         </div>
     </div>
   )

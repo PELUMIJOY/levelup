@@ -6,6 +6,7 @@ import sign from "../sign-up/signup.module.css"
 const Login = () => {
   return (
     <div className={sign.container}>
+      <div className={sign.wrapper} >
         <div className={sign.left}>
           <h3 className={sign.left1}>
             Charit<span className={sign.leftspan}>Able</span>
@@ -18,18 +19,8 @@ const Login = () => {
         
         
         </div>
-        <div className={sign.right}>
+        <div className={sign.right}  >
             <h2 className={sign.rightTop}>Login</h2>
-         {/* <div className={sign.radioContainer}>
-         <div className={sign.radio}>
-            <input type="radio" />
-            <label className={sign.student} htmlFor="">Student</label>
-          </div>
-          <div className={sign.radio}>
-             <input type="radio" />
-             <label className={sign.student} htmlFor="">Instructor</label>
-            </div>
-         </div> */}
          
             <form action="" className={sign.middle}>
             <input type="name" placeholder="Name"  className={sign.input} required/>
@@ -49,6 +40,7 @@ const Login = () => {
                 <button className={sign.bottom1}>Log In with Facebook</button>
             </div>
            
+        </div>
         </div>
     </div>
   )

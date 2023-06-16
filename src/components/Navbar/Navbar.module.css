@@ -1,13 +1,13 @@
 .wrapper{
     background: linear-gradient(109.07deg, #2E1583 16.88%, #C24AEC 79.15%);
-    margin: 10px;
+    /* margin: 10px; */
     max-width: 100%;
     position: relative;
 }
 .head{
     display: flex;
     justify-content: space-between; 
-    margin: 2rem;    
+    /* margin: 2rem;     */
 }
 
 .left{
@@ -185,32 +185,32 @@ width: 50%;
         height: 100vh;
     }
     .showonlgscreen{
-        display: none;
+        display: block;
     }
     .showonsmscreen{
-    display: block;
+    display: none;
 }   
-    .right{
+    /* .right{
         display: block;
-        
-    } 
+        position:fixed;
+        z-index: 10;
+    }  */
 
-    #rightNav {
+    /* #rightNav {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-self: start; 
-        position:fixed;
-        padding: 20px;
-        margin-right: 40px;
-        top: 90px;
-        /* right: -300px;  */
-         width: 100px;
+        align-items: center; */
+        /* justify-self: ;  */
+        /* justify-content: flex-end; */
+        /* padding: 20px;
+        margin-right: 40px; */
+        /* top: 90px; */
+         /* width: 100px;
          height: 40vh;
         background-color:  #481F72;
         box-shadow: 0 20px 30px #2E1583 ;
-        z-index: 10;      /*ensures the div always displays over other element & not behind them   */
-      }
+        z-index: 10;      ensures the div always displays over other element & not behind them  
+      } */
 
       #rightNav.active {
         right: 0px;
@@ -221,7 +221,9 @@ width: 50%;
      }
       #mobile {
         display: flex;
-     justify-content: flex-end;
+       justify-content: flex-end;
+      /* background-color: red; */
+      width: 40vw;
    
       }
 
@@ -229,6 +231,10 @@ width: 50%;
         font-size: 24px;
         cursor: pointer;
         color: #ffffff;
+        /* position: absolute; */
+        top: 10px;
+        
+
       }
 
     .bottom{
@@ -268,6 +274,58 @@ width: 50%;
     } 
 }
 @media(max-width:600px){
+    .showonlgscreen{
+        display: none;
+    }
+    .showonsmscreen{
+    display: block;
+}   
+    .right{
+        display: block;
+        position:fixed;
+        z-index: 10;
+    } 
+
+     #rightNav {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        /* justify-self: ;  */
+        /* justify-content: flex-end; */
+        padding: 20px;
+        margin-right: 40px; 
+        /* top: 90px; */
+         width: 100px;
+         height: 40vh;
+        background-color:  #481F72;
+        box-shadow: 0 20px 30px #2E1583 ;
+        z-index: 10;    /*  ensures the div always displays over other element & not behind them  */ 
+      }
+
+      #rightNav.active {
+        right: 0px;
+
+      }
+     .item{
+    
+     }
+      #mobile {
+        display: flex;
+       justify-content: flex-end;
+      /* background-color: red; */
+      width: 40vw;
+   
+      }
+
+      #mobile i {
+        font-size: 24px;
+        cursor: pointer;
+        color: #ffffff;
+        /* position: absolute; */
+        top: 10px;
+        
+
+      }
   
     .bottomRight{
         width: 100%;
