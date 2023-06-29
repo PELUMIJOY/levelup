@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, redirect } from "react-router-dom";
 import sign from "./signup.module.css";
 import axios from "axios";
 import 'react-toastify/dist/ReactToastify.css';
@@ -110,7 +110,7 @@ const SignUp = () => {
             />
 
             {/* <input type="submit" value={signUp}/> */}
-            <button type="submit" className={sign.inputbtn}>
+            <button type="submit" onClick={()=>redirect('/log')} className={sign.inputbtn}>
                 Sign Up
             </button>
             <p className={sign.inputpara}>
