@@ -6,12 +6,26 @@ import { useState } from "react";
 import axios from "axios"
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import {useForm} from 'react-hook-form'
+import * as yup from 'yup'
+import { yupResolver } from "@hookform/resolvers/yup";
+
+
+const schema = yup.object().shape({
+  email: yup.string().email().required(),
+  password: yup.string().min(6).max(32).required(),
+});
 
 const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
- const handleSumbit=(e)=>{
-    e.preventDefault()
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+ const  onSubmitHandler=()=>{
+  // console.log({ data });
+  reset();
     axios.post("https://charitable-ngo.onrender.com/auth/login",{
       email:email,
       password:password
@@ -19,7 +33,7 @@ const Login = () => {
       console.log(res)
       toast.success("You have sucessfully logged in")
       setTimeout(() => {
-        window.location.href = "/log";
+        window.location.href = "/";
       }, 2000)
     
     })
@@ -59,8 +73,8 @@ const Login = () => {
         <div className={sign.right}>
           <h2 className={sign.rightTop}>Login</h2>
 
-          <form action="" onSubmit={handleSumbit} className={sign.middle}>
-            <input
+          <form action="" onSubmit={handleSubmit(onSubmitHandler)} className={sign.middle}>
+            <input {...register("email")}
               type="email"
               value={email}
               placeholder="Phone or Email"
@@ -68,7 +82,10 @@ const Login = () => {
               required
               onChange={(e) =>setEmail(e.target.value)}
             />
-            <input
+            <label htmlFor="">{errors.email?.message}</label>
+            <br />
+
+            <input {...register("password")}
               type="password"
               value={password}
               placeholder="Password"
@@ -78,7 +95,9 @@ const Login = () => {
                 setPassword(e.target.value)
               }}
             />
-            {/* <input type="submit" value={signUp}/> */}
+            <label htmlFor="">{errors.password?.message}</label>
+            <br />
+
             <button type="submit" className={sign.inputbtn}>
               Log In
             </button>

@@ -1,16 +1,30 @@
-import { Link, redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import sign from "./signup.module.css";
 import axios from "axios";
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from "react";
 import { toast } from "react-toastify";
+import {useForm} from 'react-hook-form'
+import * as yup from 'yup'
+import { yupResolver } from "@hookform/resolvers/yup";
 
+
+const schema = yup.object().shape({
+  email: yup.string().email().required(),
+  password: yup.string().min(6).max(32).required(),
+});
 const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  
+  const onSubmitHandler = () => {
+    reset();
+
     axios
       .post("https://charitable-ngo.onrender.com/auth/signup", {
         name: name,
@@ -24,6 +38,7 @@ const SignUp = () => {
         setTimeout(() => {
           window.location.href = "/log";
         }, 2000);
+   
       })
       .catch((error) => {
         if (error.response && error.response.data && error.response.data.message) {
@@ -69,9 +84,9 @@ const SignUp = () => {
             </div>
           </div>
 
-          <form action="" onSubmit={handleSubmit} className={sign.middle}>
+          <form action="" onSubmit={handleSubmit(onSubmitHandler)} className={sign.middle}>
         
-            <input
+            <input 
               type="name"
               value={name}
               onChange={(e) => {
@@ -82,8 +97,8 @@ const SignUp = () => {
               required
               id="name"
             />
-          
-            <input
+              
+            <input {...register("email")}
               type="email"
               value={email}
               onChange={(e) => {
@@ -94,10 +109,10 @@ const SignUp = () => {
               required
               id="email"
             />
-
-
-          
-            <input
+             <label htmlFor="">{errors.email?.message}</label>
+             <br />
+  
+            <input {...register("password")}
               type="password"
               value={password}
               onChange={(e) => {
@@ -108,8 +123,9 @@ const SignUp = () => {
               required
               id="password"
             />
+            <label htmlFor="">{errors.password?.message}</label>
+      <br />
 
-            {/* <input type="submit" value={signUp}/> */}
             <button type="submit" onClick={handleSubmit} className={sign.inputbtn}>
                 Sign Up
             </button>

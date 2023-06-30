@@ -1,11 +1,8 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
-// import ages from "./pages/sign-up"
 import Signup from "./pages/sign-up/signUp"
 import Home from './pages/Home'
 import Login from './pages/Login/Login'
-// import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import { ToastContainer } from 'react-toastify';
 
