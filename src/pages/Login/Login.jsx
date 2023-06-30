@@ -19,7 +19,7 @@ const Login = () => {
       console.log(res)
       toast.success("You have sucessfully logged in")
       setTimeout(() => {
-        window.location.href = "https://levelup-git-main-pelumijoy.vercel.app/log";
+        window.location.href = "/log";
       }, 2000)
     
     })
@@ -51,7 +51,7 @@ const Login = () => {
             <p className={sign.center1}>
               To connect with us, Please Log In with your personal information.
             </p>
-            <Link to="https://levelup-git-main-pelumijoy.vercel.app/signup" className={sign.btn}>
+            <Link to="/signup" className={sign.btn}>
               Sign Up
             </Link>
           </div>
@@ -85,7 +85,7 @@ const Login = () => {
             <p className={sign.inputpara}>
               {" "}
               Don't have an account?{" "}
-              <Link className={sign.inputlink} to="https://levelup-git-main-pelumijoy.vercel.app/signup">
+              <Link className={sign.inputlink} to="/signup">
                 Sign up
               </Link>
             </p>
