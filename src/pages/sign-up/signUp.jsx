@@ -22,7 +22,7 @@ const SignUp = () => {
         toast.success('You have succesfully signup proceed to login')
         toast.success(res.data.message);
         setTimeout(() => {
-          window.location.href = "/log";
+          window.location.href = "https://levelup-git-main-pelumijoy.vercel.app/log";
         }, 2000);
       })
       .catch((error) => {
@@ -110,12 +110,12 @@ const SignUp = () => {
             />
 
             {/* <input type="submit" value={signUp}/> */}
-            <button type="submit" onClick={()=>redirect('/log')} className={sign.inputbtn}>
+            <button type="submit" onClick={()=>redirect('https://levelup-git-main-pelumijoy.vercel.app/log')} className={sign.inputbtn}>
                 Sign Up
             </button>
             <p className={sign.inputpara}>
               Already have account?{" "}
-              <Link className={sign.inputlink} to="/log">
+              <Link className={sign.inputlink} to="https://levelup-git-main-pelumijoy.vercel.app/log">
                 Log In
               </Link>
             </p>
