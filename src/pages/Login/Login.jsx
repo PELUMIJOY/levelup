@@ -37,6 +37,7 @@ const Login = () => {
       }, 2000)
     
     })
+  
     .catch((error) => {
       if (axios.isAxiosError(error)) {
         const { response } = error;
@@ -51,6 +52,15 @@ const Login = () => {
         toast.error('An error occurred. Please try again.');
       }
     });
+
+    // const googleAuth = ()=>{
+    //   axios.get('auth/google/callback',{
+    //     email: emails[0].value,
+    //     firstName: name.givenName,
+    //     lastName: name.familyName,
+    //     accessToken,
+    //   })
+    // }
 
   }
   return (
