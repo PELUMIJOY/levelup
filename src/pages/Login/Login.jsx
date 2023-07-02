@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import {useForm} from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from "@hookform/resolvers/yup";
-
+import Google from "../../components/GoogleAuth/GoAuth";
 
 const schema = yup.object().shape({
   email: yup.string().email().required(),
@@ -52,6 +52,7 @@ const Login = () => {
         toast.error('An error occurred. Please try again.');
       }
     });
+  
 
     // const googleAuth = ()=>{
     //   axios.get('auth/google/callback',{
@@ -123,10 +124,11 @@ const Login = () => {
             <hr /> <p>OR</p> <hr />
           </div>
 
-          <div className={sign.bottom}>
+          {/* <div className={sign.bottom}>   
             <button className={sign.bottom1}>Log In with Google</button>
             <button className={sign.bottom1}>Log In with Facebook</button>
-          </div>
+          </div> */}
+          <Google/>
         </div>
       </div>
     </div>

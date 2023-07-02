@@ -9,6 +9,9 @@ import * as yup from 'yup'
 import { yupResolver } from "@hookform/resolvers/yup";
 
 
+
+
+
 const schema = yup.object().shape({
   email: yup.string().email().required(),
   password: yup.string().min(6).max(32).required(),
@@ -50,6 +53,9 @@ const SignUp = () => {
         // console.log(error);
       });
   };
+
+  
+
   return (
     <div className={sign.container}>
       <div className={sign.wrapper}>
@@ -141,6 +147,9 @@ const SignUp = () => {
           </div>
 
           <div className={sign.bottom}>
+         
+ 
+     
             <button className={sign.bottom1}>Sign Up with Google</button>
             <button className={sign.bottom1}>Sign Up with Facebook</button>
           </div>
