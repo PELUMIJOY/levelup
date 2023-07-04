@@ -9,9 +9,13 @@ import Categories from '../components/Slider/Categories'
 import {slides, slides1} from "../components/Slider/Slider.js"
 import Testi from "../components/Testismony/Testi"
 
+
+
+
 const Home = () => {
   return (
     <div id="home">
+
     <Navbar/>
      <Hero/>
     <Categories slides={slides} slides1={slides1}/>

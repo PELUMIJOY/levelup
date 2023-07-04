@@ -2,14 +2,20 @@
 
 import { Link } from "react-router-dom";
 import sign from "../sign-up/signup.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios"
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import {useForm} from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from "@hookform/resolvers/yup";
-import Google from "../../components/GoogleAuth/GoAuth";
+import {signInWithGoogle} from '../../service/firebase'
+import firebase from '../../service/firebase'
+import Home from "../Home";
+import GoogleLogin from "../../components/GoogleLogin";
+
+
+
 
 const schema = yup.object().shape({
   email: yup.string().email().required(),
@@ -53,17 +59,18 @@ const Login = () => {
       }
     });
   
-
-    // const googleAuth = ()=>{
-    //   axios.get('auth/google/callback',{
-    //     email: emails[0].value,
-    //     firstName: name.givenName,
-    //     lastName: name.familyName,
-    //     accessToken,
-    //   })
-    // }
-
   }
+
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged(user => {
+      setUser(user);
+    })
+  }, [])
+
+  console.log(user);
+
   return (
     <div className={sign.container}>
       <div className={sign.wrapper}>
@@ -124,11 +131,14 @@ const Login = () => {
             <hr /> <p>OR</p> <hr />
           </div>
 
-          {/* <div className={sign.bottom}>   
-            <button className={sign.bottom1}>Log In with Google</button>
+          <div className={sign.bottom}>   
+            <button className={sign.bottom1} onClick={signInWithGoogle}
+            >Log In with Google</button>
+            {user ? <Home user ={user}/> : <GoogleLogin/>}
+            {/* <GoogleLogin/> */}
             <button className={sign.bottom1}>Log In with Facebook</button>
-          </div> */}
-          <Google/>
+          </div>
+        
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
-// import {create} from 'zustand';
+import {create} from 'zustand';
 
 
-// export const useStore = create((set) => ({
-//   authData: localStorage.getItem('authData') ? JSON.parse(localStorage.getItem('authData')) : null,
-//   setAuthData: (newAuthData) => set((state) => ({authData: newAuthData}))
-// })); 
+export const useStore = create((set) => ({
+  authData: localStorage.getItem('authData') ? JSON.parse(localStorage.getItem('authData')) : null,
+  setAuthData:() => set((state) => ({authData: state}))
+})); 
