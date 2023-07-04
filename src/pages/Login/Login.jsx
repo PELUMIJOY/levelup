@@ -37,6 +37,9 @@ const Login = () => {
       email:email,
       password:password
     }).then((res) =>{
+      res.data.user.Name
+      res.data.user.Email
+      localStorage.setItem("user", JSON.stringify(res.data.user))
       console.log(res)
       toast.success("You have sucessfully logged in")
       setTimeout(() => {

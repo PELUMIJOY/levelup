@@ -9,13 +9,19 @@ const Studentdashboard = () => {
     const [user, setUser] = useState(null);
     const Navigate = useNavigate()
 
-  useEffect(() => {
+   
+    useEffect(() => {
+      const localUser = localStorage.getItem("user")
+    setUser(  JSON.parse(localUser))
+
     firebase.auth().onAuthStateChanged(user => {
-      setUser(user);
+      setUser({Name: user.displayName, Photo:user.photoURL,}); 
     })
-  }, [])
+  console.log(localUser)
+  }, [ user])
 
   console.log(user);
+
   return (
     
 <div>
@@ -25,9 +31,10 @@ const Studentdashboard = () => {
            
       <h1 className={sign.student1}>
         Welcome, <span></span>
-        {user.displayName}
+        {user.Name}
+        {user.Email}
       </h1>
-      <img className={sign.studentimg} src={user.photoURL} alt="" />
+      <img className={sign.studentimg} src={user.Photo} alt="" />
       <button className={sign.signout} onClick={() => {auth.signOut();
             setTimeout(() => {
              Navigate ("/log");
