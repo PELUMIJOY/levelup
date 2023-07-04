@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import sign from "../sign-up/signup.module.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios"
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -10,9 +10,9 @@ import {useForm} from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from "@hookform/resolvers/yup";
 import {signInWithGoogle} from '../../service/firebase'
-import firebase from '../../service/firebase'
-import Home from "../Home";
-import GoogleLogin from "../../components/GoogleLogin";
+// import firebase from '../../service/firebase'
+// import Studentdashboard from "../Studentdashboard";
+// import GoogleLogin from "../../components/GoogleLogin";
 
 
 
@@ -23,6 +23,7 @@ const schema = yup.object().shape({
 });
 
 const Login = () => {
+  const Navigate =useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const { register, handleSubmit, formState: { errors }, reset } = useForm({
@@ -39,7 +40,7 @@ const Login = () => {
       console.log(res)
       toast.success("You have sucessfully logged in")
       setTimeout(() => {
-        window.location.href = "/";
+       Navigate("/dashboard");
       }, 2000)
     
     })
@@ -61,15 +62,15 @@ const Login = () => {
   
   }
 
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    firebase.auth().onAuthStateChanged(user => {
-      setUser(user);
-    })
-  }, [])
+  // useEffect(() => {
+  //   firebase.auth().onAuthStateChanged(user => {
+  //     setUser(user);
+  //   })
+  // }, [])
 
-  console.log(user);
+  // console.log(user);
 
   return (
     <div className={sign.container}>
@@ -132,11 +133,11 @@ const Login = () => {
           </div>
 
           <div className={sign.bottom}>   
-            <button className={sign.bottom1} onClick={signInWithGoogle}
+            <button className={sign.bottom1} onClick={signInWithGoogle} 
             >Log In with Google</button>
-            {user ? <Home user ={user}/> : <GoogleLogin/>}
+            
             {/* <GoogleLogin/> */}
-            <button className={sign.bottom1}>Log In with Facebook</button>
+            {/* <button className={sign.bottom1}>Log In with Facebook</button> */}
           </div>
         
         </div>

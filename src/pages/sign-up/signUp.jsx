@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import sign from "./signup.module.css";
 import axios from "axios";
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,18 +12,20 @@ import { yupResolver } from "@hookform/resolvers/yup";
 
 
 
+
 const schema = yup.object().shape({
   email: yup.string().email().required(),
   password: yup.string().min(6).max(32).required(),
 });
+
 const SignUp = () => {
+  const Navigate = useNavigate()
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { register, handleSubmit, formState: { errors }, reset } = useForm({
     resolver: yupResolver(schema),
   });
-
   
   const onSubmitHandler = () => {
     reset();
@@ -39,7 +41,7 @@ const SignUp = () => {
         toast.success('You have succesfully signup proceed to login')
         toast.success(res.data.message);
         setTimeout(() => {
-          window.location.href = "/log";
+          Navigate("/log");
         }, 2000);
    
       })
@@ -132,9 +134,11 @@ const SignUp = () => {
             <label htmlFor="">{errors.password?.message}</label>
       <br />
 
-            <button type="submit" onClick={handleSubmit} className={sign.inputbtn}>
+            <button type="submit" onClick={onSubmitHandler} className={sign.inputbtn}>
                 Sign Up
             </button>
+
+
             <p className={sign.inputpara}>
               Already have account?{" "}
               <Link className={sign.inputlink} to="/log">
@@ -142,7 +146,7 @@ const SignUp = () => {
               </Link>
             </p>
           </form>
-          <div className={sign.break}>
+          {/* <div className={sign.break}>
             <hr /> <p>OR</p> <hr />
           </div>
 
@@ -152,7 +156,7 @@ const SignUp = () => {
      
             <button className={sign.bottom1}>Sign Up with Google</button>
             <button className={sign.bottom1}>Sign Up with Facebook</button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

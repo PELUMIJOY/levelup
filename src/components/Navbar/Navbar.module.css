@@ -52,7 +52,6 @@
     align-items: center;
     font-size: 18px;
     color: #ffffff;
-    /* background-color: red; */
   }
 
 .log{
@@ -63,6 +62,7 @@
 #mobile {
     display: none;
   }
+  
 .showonsmscreen{
     display: none;
     width: 100%;
@@ -157,12 +157,7 @@ width: 50%;
           justify-content: center;
     }
     .brick{
-        display: none;
-        /* left: 0px;
-        top: 0px;
-        width: 180px;
-         */
-       
+        display: none;   
     }
     .code{
         display: none;
@@ -173,10 +168,6 @@ width: 50%;
     .fas{
 
         display: none;
-        /* position: static;
-        left:0px;
-        top: 0px;
-        width: 150px; */
     } 
 
 }
@@ -190,35 +181,12 @@ width: 50%;
     .showonsmscreen{
     display: none;
 }   
-    /* .right{
-        display: block;
-        position:fixed;
-        z-index: 10;
-    }  */
-
-    /* #rightNav {
-        display: flex;
-        flex-direction: column;
-        align-items: center; */
-        /* justify-self: ;  */
-        /* justify-content: flex-end; */
-        /* padding: 20px;
-        margin-right: 40px; */
-        /* top: 90px; */
-         /* width: 100px;
-         height: 40vh;
-        background-color:  #481F72;
-        box-shadow: 0 20px 30px #2E1583 ;
-        z-index: 10;      ensures the div always displays over other element & not behind them  
-      } */
 
       #rightNav.active {
         right: 0px;
 
       }
-     .item{
     
-     }
       #mobile {
         display: flex;
        justify-content: flex-end;
@@ -252,11 +220,6 @@ width: 50%;
     }
     .brick{
         display: none;
-        /* left: 0px;
-        top: 0px;
-        width: 180px;
-         */
-       
     }
     .code{
         display: none;
@@ -290,11 +253,8 @@ width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center; 
-        /* justify-self: ;  */
-        /* justify-content: flex-end; */
         padding: 20px;
         margin-right: 40px; 
-        /* top: 90px; */
          width: 100px;
          height: 40vh;
         background-color:  #481F72;
@@ -306,13 +266,11 @@ width: 50%;
         right: 0px;
 
       }
-     .item{
     
-     }
       #mobile {
         display: flex;
        justify-content: flex-end;
-      /* background-color: red; */
+   
       width: 40vw;
    
       }
@@ -321,7 +279,6 @@ width: 50%;
         font-size: 24px;
         cursor: pointer;
         color: #ffffff;
-        /* position: absolute; */
         top: 10px;
         
 
