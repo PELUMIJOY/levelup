@@ -193,7 +193,30 @@ hr{
    border-radius: 30px;
 
 }
+@media(max-width:1024px){
+    .left{
+        width: 100%;
+        /* height: 100vh; */
+      
+    }
+    .content{
+    /* height: 100vh;  */
+     margin-top: 30px;
+     margin-bottom: 20%;
+       
+    }
+    .center1{
+        width: auto;
+        /* text-align:right; */
+      text-align: inherit;
+    }
+    .right{
+        justify-content: center;
+        align-items: center;
+        margin: 100px;
+    }
 
+}
 @media(max-width:768px){
     .wrapper{
         justify-content: center;
@@ -213,6 +236,7 @@ hr{
 }
 .right{
     justify-content: center;
+    margin: 0;
 }
 
 
@@ -235,5 +259,10 @@ hr{
     .radio{
         padding:2px 10px 2px 10px;
       
+    }
+    @media(max-width:320px){
+        .wrapper{
+            width:100vw;
+        } 
     }
 }

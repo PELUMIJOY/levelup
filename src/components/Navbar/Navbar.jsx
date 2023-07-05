@@ -24,20 +24,13 @@ const Navbar = () => {
             Charit<span className={nav.leftspan}>Able</span>
           </p>
         </div>
-        {/* <div className={nav.right}>
-          <a href="" >Home</a>
-          <a href="" >About Us</a>
-          <a href="" >Services</a>
-          <a href="">Contact</a>
-          <a href="" className={nav.log}>Login</a>
-        </div> */}
+       
 
 <div className={nav.showonlgscreen}>
         <div className={nav.right}>
         
               <div
                 id={nav.rightNav }  
-                // className={open.clicked ? {nav.rightNav} : ''}
               >
              
                 <div className={nav.item}>
@@ -85,14 +78,8 @@ const Navbar = () => {
        
               <div
                 id={nav.rightNav} style={{display:"flex"}}
-                // className={open.clicked ? '#rightNav active' : 'rightNav'}
-              >
-                 {/* <div id={nav.mobile} onClick={handleClick} >
-                <i
-                  id={nav.bar}
-                  className={'fas fa-times'}
-                ></i>
-              </div> */}
+         >
+                
              
                 <div className={nav.item} style={{position:"relative"}}>
                
