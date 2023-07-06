@@ -1,8 +1,9 @@
-.Us{
+.Us {
     background: red;
 
 }
-.whyUs{
+
+.whyUs {
     color: #481F72;
     font-weight: 700;
     font-size: 30px;
@@ -10,6 +11,7 @@
 
 
 }
- .study{
+
+.study {
     display: flex;
- }
+}

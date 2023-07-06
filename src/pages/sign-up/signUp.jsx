@@ -1,17 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import sign from "./signup.module.css";
 import axios from "axios";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import { toast } from "react-toastify";
-import {useForm} from 'react-hook-form'
-import * as yup from 'yup'
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-
-
-
-
-
 
 const schema = yup.object().shape({
   email: yup.string().email().required(),
@@ -19,14 +14,19 @@ const schema = yup.object().shape({
 });
 
 const SignUp = () => {
-  const Navigate = useNavigate()
+  const Navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({
     resolver: yupResolver(schema),
   });
-  
+
   const onSubmitHandler = () => {
     reset();
 
@@ -38,25 +38,26 @@ const SignUp = () => {
       })
       .then((res) => {
         console.log(res);
-        toast.success('You have succesfully signup proceed to login')
+        toast.success("You have succesfully signup proceed to login");
         toast.success(res.data.message);
         setTimeout(() => {
           Navigate("/log");
         }, 2000);
-   
       })
       .catch((error) => {
-        if (error.response && error.response.data && error.response.data.message) {
+        if (
+          error.response &&
+          error.response.data &&
+          error.response.data.message
+        ) {
           const errorMessage = error.response.data.message;
           toast.error(errorMessage);
         } else {
-          toast.error('An error occurred. Please try again.');
+          toast.error("An error occurred. Please try again.");
         }
         // console.log(error);
       });
   };
-
-  
 
   return (
     <div className={sign.container}>
@@ -92,9 +93,12 @@ const SignUp = () => {
             </div>
           </div>
 
-          <form action="" onSubmit={handleSubmit(onSubmitHandler)} className={sign.middle}>
-        
-            <input 
+          <form
+            action=""
+            onSubmit={handleSubmit(onSubmitHandler)}
+            className={sign.middle}
+          >
+            <input
               type="name"
               value={name}
               onChange={(e) => {
@@ -105,8 +109,9 @@ const SignUp = () => {
               required
               id="name"
             />
-              
-            <input {...register("email")}
+
+            <input
+              {...register("email")}
               type="email"
               value={email}
               onChange={(e) => {
@@ -117,10 +122,11 @@ const SignUp = () => {
               required
               id="email"
             />
-             <label htmlFor="">{errors.email?.message}</label>
-             <br />
-  
-            <input {...register("password")}
+            <label htmlFor="">{errors.email?.message}</label>
+            <br />
+
+            <input
+              {...register("password")}
               type="password"
               value={password}
               onChange={(e) => {
@@ -132,12 +138,15 @@ const SignUp = () => {
               id="password"
             />
             <label htmlFor="">{errors.password?.message}</label>
-      <br />
+            <br />
 
-            <button type="submit" onClick={onSubmitHandler} className={sign.inputbtn}>
-                Sign Up
+            <button
+              type="submit"
+              onClick={onSubmitHandler}
+              className={sign.inputbtn}
+            >
+              Sign Up
             </button>
-
 
             <p className={sign.inputpara}>
               Already have account?{" "}

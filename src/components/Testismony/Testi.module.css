@@ -1,100 +1,117 @@
-.container{
-    
+.container {
+
     background: #FFB8B8;
-   
+
 
 }
-.head{
+
+.head {
     text-align: center;
     color: #481F72;
     padding-top: 20px;
     font-weight: 700;
     font-size: 50px;
-   
+
 }
-.containerwrap{
+
+.containerwrap {
     display: flex;
     justify-content: center;
 }
-.flex{
-    background:  #fff;
+
+.flex {
+    background: #fff;
     width: 250px;
     height: 200px;
-    margin: 40px;border: 1px solid #481F72;
+    margin: 40px;
+    border: 1px solid #481F72;
     box-shadow: 2px 5px 20px 2px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     padding: 20px;
     color: #481F72;
 }
-.Testy{
-   display: flex;
-  gap:1.5rem; 
+
+.Testy {
+    display: flex;
+    gap: 1.5rem;
 }
-.Testimg{
- border-radius: 50%;
- width: 70px;
- height: 70px;
+
+.Testimg {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
 }
-.left{
+
+.left {
     text-align: justify;
     line-height: 3px;
 }
 
 
 
-@media(max-width:1024px){
-    .flex{
-        height:100%;
+@media(max-width:1024px) {
+    .flex {
+        height: 100%;
 
     }
-    .left p{
-    
+
+    .left p {
+
         font-size: 12px;
-     
-     }
-     .left h4 {    font-size: 12px;
-     
-     }
-     .container{
-        width:100% ;
-     }
+
+    }
+
+    .left h4 {
+        font-size: 12px;
+
+    }
+
+    .container {
+        width: 100%;
+    }
 }
-@media(max-width:900px){
-   
-  
- .containerwrap{
-    align-items: center;
-    flex-wrap: wrap;
-}
-}
-@media(max-width:768px){
-    .containerwrap{
+
+@media(max-width:900px) {
+
+
+    .containerwrap {
         align-items: center;
         flex-wrap: wrap;
     }
 }
 
-@media(max-width:600px){
-    .head{
+@media(max-width:768px) {
+    .containerwrap {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width:600px) {
+    .head {
         font-size: 20px;
     }
-    .Testy{
-   
-      flex-direction: column;
-      align-items: center;
-      gap: 0;
-     }
-.flex{
-width: 100%;
-height: 50vh;
-}
-.left {
-align-items: center;
 
-}
-.containerwrap{
-    /* flex-direction: column; */
-    align-items: center;
-    flex-wrap: wrap;
-}
+    .Testy {
+
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .flex {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .left {
+        align-items: center;
+
+    }
+
+    .containerwrap {
+        /* flex-direction: column; */
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }

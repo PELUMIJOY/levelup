@@ -3,19 +3,16 @@
 import { Link, useNavigate } from "react-router-dom";
 import sign from "../sign-up/signup.module.css";
 import { useState } from "react";
-import axios from "axios"
+import axios from "axios";
 import { toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
-import {useForm} from 'react-hook-form'
-import * as yup from 'yup'
+import "react-toastify/dist/ReactToastify.css";
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import {signInWithGoogle} from '../../service/firebase'
+import { signInWithGoogle } from "../../service/firebase";
 // import firebase from '../../service/firebase'
 // import Studentdashboard from "../Studentdashboard";
 // import GoogleLogin from "../../components/GoogleLogin";
-
-
-
 
 const schema = yup.object().shape({
   email: yup.string().email().required(),
@@ -23,47 +20,53 @@ const schema = yup.object().shape({
 });
 
 const Login = () => {
-  const Navigate =useNavigate()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+  const Navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({
     resolver: yupResolver(schema),
   });
 
- const  onSubmitHandler=()=>{
-  // console.log({ data });
-  reset();
-    axios.post("https://charitable-ngo.onrender.com/auth/login",{
-      email:email,
-      password:password
-    }).then((res) =>{
-      res.data.user.Name
-      res.data.user.Email
-      localStorage.setItem("user", JSON.stringify(res.data.user))
-      console.log(res)
-      toast.success("You have sucessfully logged in")
-      setTimeout(() => {
-       Navigate("/dashboard");
-      }, 2000)
-    
-    })
-  
-    .catch((error) => {
-      if (axios.isAxiosError(error)) {
-        const { response } = error;
-        if (response && response.status === 400) {
-          const { data } = response;
-          if (data.error === 'Invalid credentials') {
-            toast.error('Invalid email or password');
-            return; // Stop further execution
+  const onSubmitHandler = () => {
+    // console.log({ data });
+    reset();
+    axios
+      .post("https://charitable-ngo.onrender.com/auth/login", {
+        email: email,
+        password: password,
+      })
+      .then((res) => {
+        res.data.user.Name;
+        res.data.user.Email;
+        localStorage.setItem("user", JSON.stringify(res.data.user));
+        console.log(res);
+        toast.success("You have sucessfully logged in");
+
+        setTimeout(() => {
+          Navigate("/dashboard");
+        }, 2000);
+      })
+
+      .catch((error) => {
+        if (axios.isAxiosError(error)) {
+          const { response } = error;
+          if (response && response.status === 400) {
+            const { data } = response;
+            if (data.error === "Invalid credentials") {
+              toast.error("Invalid email or password");
+              return; // Stop further execution
+            }
           }
+        } else {
+          toast.error("An error occurred. Please try again.");
         }
-      } else {
-        toast.error('An error occurred. Please try again.');
-      }
-    });
-  
-  }
+      });
+  };
 
   // const [user, setUser] = useState(null);
 
@@ -95,26 +98,32 @@ const Login = () => {
         <div className={sign.right}>
           <h2 className={sign.rightTop}>Login</h2>
 
-          <form action="" onSubmit={handleSubmit(onSubmitHandler)} className={sign.middle}>
-            <input {...register("email")}
+          <form
+            action=""
+            onSubmit={handleSubmit(onSubmitHandler)}
+            className={sign.middle}
+          >
+            <input
+              {...register("email")}
               type="email"
               value={email}
               placeholder="Phone or Email"
               className={sign.input}
               required
-              onChange={(e) =>setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <label htmlFor="">{errors.email?.message}</label>
             <br />
 
-            <input {...register("password")}
+            <input
+              {...register("password")}
               type="password"
               value={password}
               placeholder="Password"
               className={sign.input}
               required
               onChange={(e) => {
-                setPassword(e.target.value)
+                setPassword(e.target.value);
               }}
             />
             <label htmlFor="">{errors.password?.message}</label>
@@ -135,19 +144,22 @@ const Login = () => {
             <hr /> <p>OR</p> <hr />
           </div>
 
-          <div className={sign.bottom}>   
-            <button className={sign.bottom1} onClick={() => {
+          <div className={sign.bottom}>
+            <button
+              className={sign.bottom1}
+              onClick={() => {
                 signInWithGoogle();
-              //  setTimeout(() => {
-              //  Navigate("/dashboard");
-              //       }, 5000);
-  }}
- >Log In with Google</button>
-            
+                setTimeout(() => {
+                  Navigate("/dashboard");
+                }, 8000);
+              }}
+            >
+              Log In with Google
+            </button>
+
             {/* <GoogleLogin/> */}
             {/* <button className={sign.bottom1}>Log In with Facebook</button> */}
           </div>
-        
         </div>
       </div>
     </div>
