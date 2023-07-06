@@ -136,8 +136,13 @@ const Login = () => {
           </div>
 
           <div className={sign.bottom}>   
-            <button className={sign.bottom1} onClick={signInWithGoogle} 
-            >Log In with Google</button>
+            <button className={sign.bottom1} onClick={() => {
+    signInWithGoogle();
+    setTimeout(() => {
+      history.push("/dashboard");
+    }, 2000);
+  }}
+ >Log In with Google</button>
             
             {/* <GoogleLogin/> */}
             {/* <button className={sign.bottom1}>Log In with Facebook</button> */}

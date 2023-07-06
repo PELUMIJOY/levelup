@@ -17,10 +17,11 @@ const Studentdashboard = () => {
     firebase.auth().onAuthStateChanged(user => {
       setUser({Name: user.displayName, Photo:user.photoURL,}); 
     })
-  console.log(localUser)
-  }, [ user])
 
-  console.log(user);
+  // console.log(localUser)
+  }, [Navigate, user])
+
+  // console.log(user);
 
   return (
     
@@ -46,7 +47,8 @@ const Studentdashboard = () => {
     </div>
      ) : (
         " "
-      )}
+  
+      )     }
     
            {/* {user ? <Studentdashboard user ={user}/> : <GoogleLogin/>} */}
 </div>
