@@ -15,7 +15,7 @@ const Studentdashboard = () => {
       setUser({ Name: user.displayName, Photo: user?.photoURL });
     });
 
-    console.log(localUser);
+    // console.log(localUser);
   }, []);
 
   // useEffect(() => {
@@ -23,7 +23,7 @@ const Studentdashboard = () => {
   //     Navigate('/dashboard'); // Navigate to dashboard after successful login
   //   }
   // }, [user, Navigate]);
-  console.log(user);
+  // console.log(user);
 
   return (
     <div>
