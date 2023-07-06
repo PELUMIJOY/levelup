@@ -137,10 +137,10 @@ const Login = () => {
 
           <div className={sign.bottom}>   
             <button className={sign.bottom1} onClick={() => {
-    signInWithGoogle();
-    setTimeout(() => {
-      history.push("/dashboard");
-    }, 2000);
+                signInWithGoogle();
+               setTimeout(() => {
+               Navigate("/dashboard");
+                    }, 2000);
   }}
  >Log In with Google</button>
             
