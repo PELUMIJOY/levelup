@@ -140,7 +140,7 @@ const Login = () => {
                 signInWithGoogle();
                setTimeout(() => {
                Navigate("/dashboard");
-                    }, 2000);
+                    }, 5000);
   }}
  >Log In with Google</button>
             
