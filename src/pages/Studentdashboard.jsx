@@ -33,7 +33,8 @@ const Studentdashboard = () => {
       <h1 className={sign.student1}>
         Welcome, <span></span>
         {user.Name}
-        {user.Email}
+        <p>  {user.Email} </p>
+      
       </h1>
       <img className={sign.studentimg} src={user.Photo} alt="" />
       <button className={sign.signout} onClick={() => {auth.signOut();
@@ -45,6 +46,7 @@ const Studentdashboard = () => {
         Sign out
       </button>
     </div>
+  
      ) : (
         " "
   
