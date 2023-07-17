@@ -18,6 +18,18 @@ const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // const [interest, setInterest] = useState("");
+
+  // const handleArea = (
+	// 	event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>
+	// ) => {
+	// 	const { value } = event.target;
+	// 	setInterestError("");
+	// 	setInterest(event.target.value);
+	// 	setIsAreaOfInterest(false);
+	// 	setAreaOfInterests([interest]);
+	// };
+
   const {
     register,
     handleSubmit,
@@ -99,7 +111,7 @@ const SignUp = () => {
             className={sign.middle}
           >
             <input
-              type="name"
+              type="text"
               value={name}
               onChange={(e) => {
                 setName(e.target.value);
@@ -140,6 +152,27 @@ const SignUp = () => {
             <label htmlFor="">{errors.password?.message}</label>
             <br />
 
+            <div className="formLabel">
+              {/* <label id="interest">Area of Interest</label> */}
+              {/* <span className="astericks">*</span> */}
+              <label htmlFor="">
+
+              <select
+                id="interest"
+                name="areaOfInterest"
+                // value={interest}
+                // onChange={handleArea}
+                className={sign.input}
+                >
+                <option value="area">Area of interest</option>
+                <option value="vocation">Vocational skils</option>
+                <option value="technical">Technical skills</option>
+
+                {/* <option value="digital">Digital Marketing</option> */}
+              </select>
+                   </label>
+            </div>
+           
             <button
               type="submit"
               onClick={onSubmitHandler}

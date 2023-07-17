@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import firebase from "../service/firebase";
 import sign from "./sign-up/signup.module.css";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar/Navbar"
 const Studentdashboard = () => {
   const [user, setUser] = useState(null);
   const Navigate = useNavigate();
@@ -27,7 +28,7 @@ const Studentdashboard = () => {
 
   return (
     <div>
-      {/* <Navbar/> */}
+      <Navbar/>
       {user ? (
         <div className={sign.student}>
           <h1 className={sign.student1}>

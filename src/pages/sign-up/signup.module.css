@@ -155,6 +155,24 @@
     color: #481F72;
 }
 
+select {
+    display: flex;
+    border: 1px solid rgb(233, 228, 228);
+    outline: none;
+    font-size: 14px;
+    padding: 10px;
+    width: 95%;
+    /* color: rgb(39, 38, 38); */
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 20px;
+    border: 1px solid #481F72;
+    border-radius: 50px;
+    margin: 10px;
+  
+  }
+ select, option{
+    color: #481F72;
+  }
 .break {
     display: flex;
     align-items: center;
